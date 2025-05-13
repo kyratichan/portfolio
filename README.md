@@ -1,2 +1,2 @@
 # Portfolio
-## Kyra Chan's UX Portfolio
+Kyra Chan's UX Portfolio
