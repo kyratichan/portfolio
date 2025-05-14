@@ -20,15 +20,22 @@
 }
 
 @font-face {
-  font-family: 'ITCGaramondStd-LightCondensed';
-  src: url('fonts/ITCGaramondStd-LightCondensed.otf') format('otf');
+  font-family: 'ITCGaramondStd-LtCond';
+  src: url('fonts/ITCGaramondStd-LtCond.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplayLight';
+  src: url('fonts/NeueHaasDisplayLight.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
   
 /* Basic Typography & Layout */
 body {
-  font-family: 'SalmaPro-Regular', sans-serif;
+  font-family: 'NeueHaasDisplayLight', sans-serif;
   line-height: 1.6;
   background-color: #F9F9F2;
   color: #56564F;
@@ -57,7 +64,7 @@ header h1 {
 }
 
 .navbar .logo a {
-  font-family: "ITCGaramondStd-LightCondensed";
+  font-family: 'ITCGaramondStd-LtCond';
   color: #8C8C81;
   font-size: 2.5rem;
   text-decoration: none;
@@ -138,14 +145,21 @@ section {
   margin-bottom: 3rem;
 }
 
+h1 {
+  font-family: 'ITCGaramondStd-LtCond';
+  font-size: 4rem;
+  font-weight: normal;
+}
+
 h2 {
-  font-family: 'SalmaPro-Regular', sans-serif;
+  font-family: 'SalmaPro-Regular';
   font-size: 2rem;
   color: #111;
   margin-bottom: 1rem;
 }
 
 p {
+  font-family: 'NeueHaasDisplayLight';
   font-size: 1rem;
   margin-bottom: 1rem;
 }
