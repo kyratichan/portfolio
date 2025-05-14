@@ -10,21 +10,7 @@
   <header>
     <!-- Navbar -->
     <div id="navbar"></div>
-    <script>
-      const currentPage = window.location.pathname.split('/').pop().split('.')[0] || 'index';
-
-      fetch('nav.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('navbar').innerHTML = html;
-
-          // After injection, find the matching link
-          const activeLink = document.querySelector(`[data-page="${currentPage}"]`);
-          if (activeLink) {
-            activeLink.classList.add('active');
-          }
-        });
-    </script>
+    <script src="script.js" defer></script> 
   </header>
 
   <main>
@@ -93,7 +79,7 @@
         <div class="sbs-right">
           <div class="line-between">
             <p class="salma-pro forest side-text">Design and Development</p>
-            <div class="divider bg-forest"></div>
+            <div class="divider-short bg-forest"></div>
             <p class="salma-pro forest side-text">Kyra Chan</p>
           </div>
         </div>

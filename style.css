@@ -115,7 +115,7 @@ header {
 }
 
 .navbar .nav-links li a.active {
-  color: #15616D;
+  color: #15616D !important;
 }
 
 .navbar .nav-links li a:hover {
@@ -178,7 +178,7 @@ header {
   max-width: fit-content;
 }
 
-.divider {
+.divider-short {
   min-width: 32px;
   max-width: 32px;
   height: 1.25px;
@@ -186,9 +186,42 @@ header {
   margin-bottom: 1px;
 }
 
+.divider {
+  height: 1.25px;
+  background-color: #E5E5DA;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .side-text {
   margin: 0; /* remove default <p> spacing */
   white-space: nowrap; /* optional: prevent wrapping */
+}
+
+#about-page {
+  display: flex;
+  gap: 2rem;
+  min-height: 100vh; /* optional: for testing scroll */
+}
+
+.two-column-sticky-scroll {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.sticky-column {
+  position: sticky;
+  top: 2rem;
+  min-width: 750px;
+  max-width: 750px;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+.scrolling-column {
+  flex: 1;
 }
 
 .align-bottom {
@@ -245,6 +278,7 @@ header {
     top: 70px; /* Below the navbar */
     left: 0;
     background-color: #F9F9F2;
+    transition: all 0.3s ease;
   }
 
   .navbar .nav-links li {
@@ -323,6 +357,13 @@ h2 {
   font-weight: normal;
 }
 
+h4 {
+  font-family: 'ITCGaramondStd-LtCond';
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 4.2rem;
+}
+
 h5 {
   font-family: 'SalmaPro-Regular';
   font-size: 1rem;
@@ -330,6 +371,7 @@ h5 {
   margin-top: 0.25rem;
   color: #8C8C81;
   letter-spacing: 0.12rem;
+  text-transform: uppercase;
 }
 
 p {
