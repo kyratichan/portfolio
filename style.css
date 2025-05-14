@@ -8,44 +8,58 @@
 @font-face {
   font-family: 'SalmaPro-Medium';
   src: url('fonts/SalmaPro-Medium.ttf') format('ttf');
-       /* url('fonts/MyFont.woff') format('woff'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SalmaPro-Regular';
+  src: url('fonts/SalmaPro-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ITCGaramondStd-LightCondensed';
+  src: url('fonts/ITCGaramondStd-LightCondensed.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 }
   
 /* Basic Typography & Layout */
 body {
-  font-family: 'SalmaPro-Medium', sans-serif;
+  font-family: 'SalmaPro-Regular', sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #F9F9F2;
+  color: #56564F;
   padding: 0 1rem;
 }
 
 /* Header Styling */
 header {
   background-color: #ffffff;
-  padding: 2rem 0;
+  padding: 0rem 0;
   border-bottom: 1px solid #eaeaea;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  vertical-align: middle;
   align-items: center;
-  background-color: #333;
-  padding: 1rem 2rem;
+  background-color: #F9F9F2;
+  padding: 1rem 2rem 0.75rem;
 }
 
 .navbar .logo a {
-  color: #fff;
-  font-size: 1.5rem;
+  font-family: "ITCGaramondStd-LightCondensed";
+  color: #8C8C81;
+  font-size: 2.5rem;
   text-decoration: none;
 }
 
@@ -56,14 +70,19 @@ header h1 {
 }
 
 .navbar .nav-links li a {
-  color: #fff;
+  font-family: 'SalmaPro-Medium', sans-serif;
+  color: #8C8C81;
+  letter-spacing: 0.1rem;
   text-decoration: none;
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.75rem;
 }
 
 .navbar .nav-links li a:hover {
-  background-color: #575757;
+  color: #56564F;
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  background-color: #F2F2EB;
   border-radius: 5px;
 }
 
@@ -75,7 +94,7 @@ header h1 {
 .menu-icon {
   display: none;
   font-size: 2rem;
-  color: white;
+  color: #8C8C81;
   cursor: pointer;
 }
 
@@ -88,7 +107,7 @@ header h1 {
     position: absolute;
     top: 70px; /* Below the navbar */
     left: 0;
-    background-color: #333;
+    background-color: #F9F9F2;
   }
 
   .navbar .nav-links li {
@@ -120,6 +139,7 @@ section {
 }
 
 h2 {
+  font-family: 'SalmaPro-Regular', sans-serif;
   font-size: 2rem;
   color: #111;
   margin-bottom: 1rem;
