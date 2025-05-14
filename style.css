@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: 'SalmaPro';
+  font-family: 'SalmaPro-Medium';
   src: url('fonts/SalmaPro-Medium.ttf') format('ttf');
        /* url('fonts/MyFont.woff') format('woff'); */
   font-weight: normal;
@@ -15,7 +15,7 @@
   
 /* Basic Typography & Layout */
 body {
-  font-family: 'SalmaPro', sans-serif;
+  font-family: 'SalmaPro-Medium', sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
