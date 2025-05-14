@@ -5,11 +5,13 @@
   box-sizing: border-box;
 }
 
+/* Fonts */
 @font-face {
   font-family: 'SalmaPro-Medium';
   src: url('fonts/SalmaPro-Medium.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
+  letter-spacing: 0.12rem;
 }
 
 @font-face {
@@ -27,40 +29,67 @@
 }
 
 @font-face {
-  font-family: 'NeueHaasDisplayLight';
+  font-family: 'NeueHaasDisplay-Light';
   src: url('fonts/NeueHaasDisplayLight.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
+  letter-spacing: 0.03rem;
+}
+
+/* Colors */
+.bg-n2 {
+  background-color: #F2F2EB;
+}
+
+.bg-forest {
+  background-color: #15616D;
+}
+
+.bg-sage {
+  background-color: #C5EEF0;
+}
+
+.bg-sky {
+  background-color: #B7CFE2;
+}
+
+.n1 {
+  color: #F9F9F2;
+}
+
+.forest {
+  color: #15616D;
+}
+
+.sage {
+  color: #C5EEF0;
 }
   
 /* Basic Typography & Layout */
 body {
-  font-family: 'NeueHaasDisplayLight', sans-serif;
+  font-family: 'NeueHaasDisplay-Light';
+  letter-spacing: 0.03rem;
   line-height: 1.6;
   background-color: #F9F9F2;
   color: #56564F;
-  padding: 0 1rem;
+  padding: 0 0rem;
 }
 
 /* Header Styling */
 header {
   background-color: #ffffff;
   padding: 0rem 0;
-  border-bottom: 1px solid #eaeaea;
   text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem
-}
-
+/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
   align-items: center;
   background-color: #F9F9F2;
-  padding: 1rem 2rem 0.75rem;
+  padding: 2rem 6rem 2rem;
 }
 
 .navbar .logo a {
@@ -79,10 +108,14 @@ header h1 {
 .navbar .nav-links li a {
   font-family: 'SalmaPro-Medium', sans-serif;
   color: #8C8C81;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.12rem;
   text-decoration: none;
   font-size: 1rem;
   padding: 0.75rem;
+}
+
+.navbar .nav-links li a.active {
+  color: #15616D;
 }
 
 .navbar .nav-links li a:hover {
@@ -103,6 +136,103 @@ header h1 {
   font-size: 2rem;
   color: #8C8C81;
   cursor: pointer;
+}
+
+/* Two-Column Layout */
+.two-column {
+  align-items: center;
+  display: flex;
+  gap: 2rem; /* space between columns */
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1; /* equal width */
+}
+
+/* Side By Side Layout */
+.sbs {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.list {
+  border-bottom: 1px solid #CCCBBA;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.last {
+  border-bottom: 0px;
+}
+
+.line-between {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  gap: .35rem;
+  max-width: fit-content;
+}
+
+.divider {
+  min-width: 32px;
+  max-width: 32px;
+  height: 1.25px;
+  background-color: #15616D;
+  margin-bottom: 1px;
+}
+
+.side-text {
+  margin: 0; /* remove default <p> spacing */
+  white-space: nowrap; /* optional: prevent wrapping */
+}
+
+.align-bottom {
+  align-items: flex-end;
+}
+
+/* Text Formatting */
+.salma-pro {
+  font-family: "SalmaPro-Medium";
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.12rem;
+}
+
+.align-right {
+  text-align: right;
+  align-items: end;
+}
+
+.h2-margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.p-margin-bottom {
+  margin-bottom: 1rem;
+}
+
+#title-description {
+  max-width: 450px;
+}
+
+#playground-description {
+  max-width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+#playground-projects {
+  min-width: 400px;
+  max-width: 500px;
+}
+
+#about-description {
+  max-width: 270px;
+  margin-bottom: 2.5rem;
 }
 
 /* Media query for mobile */
@@ -132,43 +262,88 @@ header h1 {
   .navbar.active .menu-icon {
     color: #ff6f61;
   }
+
+  .two-column {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sbs {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+  
+  .align-right {
+    text-align: left; /* Right aligned text becomes left aligned when stacked */
+  }
+
+  .h2-margin-bottom {
+    margin-bottom: 0rem;
+  }
+
+  #playground-description {
+    max-width: 500px;
+    margin-bottom: 4rem;
+  }
 }
 
 /* Main Sections */
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding-bottom: 4rem;
+  margin: 0rem 0rem;
 }
 
 section {
-  margin-bottom: 3rem;
+  padding: 5rem 6rem;
+}
+
+#title {
+  padding-top: 3rem;
+}
+
+#footer {
+  padding: 1.25rem 6rem;
 }
 
 h1 {
   font-family: 'ITCGaramondStd-LtCond';
-  font-size: 4rem;
+  font-size: 6.5rem;
   font-weight: normal;
+  line-height: 1rem;
 }
 
 h2 {
+  font-family: 'ITCGaramondStd-LtCond';
+  font-size: 5rem;
+  font-weight: normal;
+}
+
+h5 {
   font-family: 'SalmaPro-Regular';
-  font-size: 2rem;
-  color: #111;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0.25rem;
+  color: #8C8C81;
+  letter-spacing: 0.12rem;
 }
 
 p {
-  font-family: 'NeueHaasDisplayLight';
+  font-family: 'NeueHaasDisplay-Light';
   font-size: 1rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.03rem;
+}
+
+a {
+  text-decoration: none;  /* removes underline */
+  color: inherit;         /* makes link match surrounding text color */
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  color: #888;
-  font-size: 0.9rem;
+  padding: 0rem 0rem;
 }

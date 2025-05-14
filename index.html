@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head >
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kyra Chan | UX Designer</title>
@@ -9,20 +9,22 @@
 <body>
   <header>
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#">Kyra Chan</a>
-      </div>
-      <div class="menu-icon" id="menu-icon">
-        <span>&#9776;</span> <!-- Hamburger icon -->
-      </div>
-      <ul class="nav-links">
-        <li><a href="#work">WORK</a></li>
-        <li><a href="#projects">PLAY</a></li>
-        <li><a href="#contact">RESUME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-      </ul>
-    </nav>
+    <div id="navbar"></div>
+    <script>
+      const currentPage = window.location.pathname.split('/').pop().split('.')[0] || 'index';
+
+      fetch('nav.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('navbar').innerHTML = html;
+
+          // After injection, find the matching link
+          const activeLink = document.querySelector(`[data-page="${currentPage}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        });
+    </script>
   </header>
 
   <main>
@@ -31,30 +33,72 @@
         <div class="left">
           <h1>Kyra Chan</h1>
         </div>
-        <div class="right">
-          <p>Product designer interested in creating seamless experiences that simplify complex problems. Currently based in Brooklyn designing government acquisition management systems for Appian.</p>
+        <div class="right" id="title-description">
+          <p class="align-right p-margin-bottom">Product designer interested in creating seamless experiences that simplify complex problems. Currently based in Brooklyn designing government acquisition management systems for Appian.</p>
         </div>
       </div>
     </section>
 
-    <section id="work">
-      <h2>Selected Projects</h2>
+    <section id="work" class="bg-n2">
+      <h2>Case Studies</h2>
       <!-- Add project cards or links here -->
     </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m a UX designer focused on creating intuitive and engaging digital experiences.</p>
+    <section id="playground">
+      <h2 class="h2-margin-bottom">Playground</h2>
+      <div class="sbs align-bottom">
+        <div class="sbs-left" id="playground-description">
+          <p>A sandbox of creative freelance projects</p>
+        </div>
+        <div class="sbs-right align-right" id="playground-projects">
+          <div class="sbs list">
+            <div class="sbs-left"><h5>JAKE & ARIANE’S WEDDING</h5></div>
+            <div class="sbs-right"><h5>2024</h5></div>
+          </div>
+          <div class="sbs list">
+            <div class="sbs-left"><h5>AUSTIN & LINDA’S WEDDING</h5></div>
+            <div class="sbs-right"><h5>2023</h5></div>
+          </div>
+          <div class="sbs list">
+            <div class="sbs-left"><h5>BELLEVUE</h5></div>
+            <div class="sbs-right"><h5>2022</h5></div>
+          </div>
+          <div class="sbs list last">
+            <div class="sbs-left"><h5>FILMIC PRODUCTIONS</h5></div>
+            <div class="sbs-right"><h5>2020</h5></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Get in Touch</h2>
-      <p>Email me at <a href="kyratichan@gmail.com">kyratichan@gmail.com</a></p>
+    <section id="about" class="bg-forest">
+      <div class="sbs align-bottom">
+        <div class="sbs-left">
+          <h2 class="sage">About</h2>
+        </div>
+        <div class="sbs-right" id="about-description">
+          <p class="n1 align-right">Get to know a little bit more about my design background and other fun tidbits</p>
+        </div>
+      </div>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2025 Kyra Chan</p>
+    <section id="footer" class="bg-sky">
+      <div class="sbs">
+        <div class="sbs-left">
+          <p class="salma-pro forest"><a href="mailto:kyratichan@gmail.com">kyratichan@gmail.com</a></p>
+        </div>
+        <div class="sbs-right">
+          <div class="line-between">
+            <p class="salma-pro forest side-text">Design and Development</p>
+            <div class="divider bg-forest"></div>
+            <p class="salma-pro forest side-text">Kyra Chan</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </footer>
 
   <script src="script.js"></script>
