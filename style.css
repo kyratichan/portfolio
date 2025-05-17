@@ -373,10 +373,10 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* #playground-projects { */
-  /* min-width: 400px;
-  max-width: 500px; */
-/* } */
+#playground-projects {
+  min-width: 400px;
+  max-width: 500px;
+}
 
 #about-description {
   max-width: 270px;
