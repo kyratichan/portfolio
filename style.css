@@ -221,25 +221,36 @@ header {
 
 .sbs-work {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.sbs-work-cards {
+  display: flex;
+  flex: 3 1 0;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .project-card-small {
   aspect-ratio: 1 / 1;
-  flex: 1 1 calc(33.333% - 1rem); /* 3 per row with gap */
-  max-width: calc(33.333% - 1rem);
-  background-color: #15616D;
+  flex: 1 1 30%;
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 0; /* Prevent flexbox from overflowing */
+  transition: transform 0.3s ease;
 }
 
 .project-card-small img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .list {
@@ -306,6 +317,10 @@ header {
   max-width: 730px;
 }
 
+.align-top {
+  align-items: flex-start;
+}
+
 .align-bottom {
   align-items: flex-end;
 }
@@ -329,16 +344,24 @@ header {
   align-items: end;
 }
 
+.mt-15 {
+  margin-top: 1.5rem;
+}
+
 .mb-075 {
   margin-bottom: 0.75rem;
 }
 
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.mb-15 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
 #title-description {
@@ -350,10 +373,10 @@ header {
   margin-bottom: 0.5rem;
 }
 
-#playground-projects {
-  min-width: 400px;
-  max-width: 500px;
-}
+/* #playground-projects { */
+  /* min-width: 400px;
+  max-width: 500px; */
+/* } */
 
 #about-description {
   max-width: 270px;
@@ -361,6 +384,12 @@ header {
 }
 
 #work-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 310px;
+  flex: 1 1 300px;
+  min-width: 150px;
   max-width: 150px;
 }
 
@@ -403,6 +432,17 @@ header {
     align-items: start;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .sbs-work {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .sbs-work-cards {
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .project-card-small {
