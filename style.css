@@ -77,12 +77,19 @@ html {
   color: #C5EEF0;
 }
 
-/* Icons */
-.about-image {
-  background-color: #B7CFE2;
-  width: 130px;
-  height: 130px;
+/* Icons and Images */
+.about-image-small {
+  width: 160px;
+  height: 160px;
   border-radius: 8px;
+  overflow: hidden;
+}
+
+.about-image-large {
+  width: 280px;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 svg {
@@ -344,15 +351,27 @@ header {
   align-items: end;
 }
 
+.mt-025 {
+  margin-top: 0.25rem;
+}
+
 .mt-15 {
   margin-top: 1.5rem;
+}
+
+.mt-50 {
+  margin-top: 5rem;
+}
+
+.mt-120 {
+  margin-top: 12rem;
 }
 
 .mb-075 {
   margin-bottom: 0.75rem;
 }
 
-.mb-1 {
+.mb-10 {
   margin-bottom: 1rem;
 }
 
@@ -360,12 +379,16 @@ header {
   margin-bottom: 1.5rem;
 }
 
-.mb-2 {
+.mb-20 {
   margin-bottom: 2rem;
 }
 
 #title-description {
   max-width: 450px;
+}
+
+#playground-title {
+  margin-bottom: 2rem;
 }
 
 #playground-description {
@@ -441,13 +464,40 @@ header {
   }
 
   .sbs-work-cards {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
+  #playground-title {
+    margin-bottom: 0.5rem;
+  }
+
+  #playground-description {
+    max-width: 500px;
+    margin-bottom: 4rem;
+  }
+
+  #work-description {
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.5rem;
+    height: auto;
+    flex: auto;
+  }
+
   .project-card-small {
     flex: 1 1 100%;
+    width: 100%;
+    min-width: 100%;
     max-width: 100%;
+  }
+
+  .sbs-social-media {
+    margin-top: 1rem;
   }
 
   .list {
@@ -460,11 +510,6 @@ header {
 
   .h2-margin-bottom {
     margin-bottom: 0rem;
-  }
-
-  #playground-description {
-    max-width: 500px;
-    margin-bottom: 4rem;
   }
 }
 
@@ -489,7 +534,7 @@ h1 {
   font-family: 'ITCGaramondStd-LtCond';
   font-size: 6.5rem;
   font-weight: normal;
-  line-height: 1rem;
+  line-height: 9.75rem;
 }
 
 h2 {
@@ -524,6 +569,13 @@ p {
 a {
   text-decoration: none;  /* removes underline */
   color: inherit;         /* makes link match surrounding text color */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Footer */
