@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyra Chan | UX Designer</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="/script.js" defer></script> 
+  </header>
+
+  <main>
+    <section id="cw-ota-overview">
+      <!-- TITLE & DESCRIPTION -->
+      <div class="sbs mb-50 align-top">
+        <div class="sbs-left">
+          <h2>Other Transaction Agreements</h2>
+        </div>
+        <div class="sbs-right" id="title-description">
+          <p class="align-left">Enabling government agencies to track and manage special contractual agreements with non-traditional contractors, otherwise known as Other Transaction (OT) agreements</p>
+        </div>
+      </div>
+
+      <div class="image-container mb-50">
+        <img src="/assets/images/cw-mockup.png" alt="Government Contract Writing" />
+      </div>
+
+      <!-- PROJECT DETAILS & BACKGROUND -->
+      <div class="two-column mb-50">
+        <div class="project-details-container mt-025">
+            
+            <div class="detail-field">
+                <p class="salma-pro n5">Company</p>
+                <p class="mt-025">Appian</p>
+            </div>
+            
+            <div class="detail-field">
+                <p class="salma-pro n5">Industry</p>
+                <p class="mt-025">Public Sector</p>
+            </div>
+            
+            <div class="detail-field">
+                <p class="salma-pro n5">Timeline</p>
+                <p class="mt-025">Feb 2024 - Sep 2024</p>
+            </div>
+
+            <div class="detail-field">
+                <p class="salma-pro n5">Role</p>
+                <p class="mt-025">UX/UI, AI</p>
+            </div>
+        </div>
+        
+        <div class="project-background"> 
+            <p>Appian is a low-code platform that focuses on creating and deploying workflow automation applications. The Solutions team within Appian extends the low-code platform to offer out-of-the-box solutions for horizontal use cases and vertical industries. I led the User Experience (UX) efforts for the Contract Writing solution within the Government Acquisition solution suite from its 1.0 to 2.0 release.</p>
+        </div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div class="two-column-image mb-50">
+        <div class="image-container">
+          <img src="/assets/images/cw-mockup.png" alt="Contract Writing Dashboard" />
+        </div>
+        <div class="image-container">
+          <img src="/assets/images/cw-mockup.png" alt="Contract Writing Dashboard" />
+        </div>
+      </div>
+
+      <!-- THE CHALLENGE -->
+      <div class="two-column-content w-80">
+        <div class="header-column">
+            <h6 class="mb-075">The Challenge</h6>
+            <p class="n5">Broadening our market reach to non-traditional agencies</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>To leverage emerging technologies with greater speed and flexibility than standard Federal Acquisition Regulation (FAR) based contracts, government agencies use Other Transaction (OT) agreements to contract with non-traditional government contractors, such as research institutions, commercial companies, and tech startups. Although OTs bypass the rigid constraints of traditional FAR-based contracts, they also vary widely in structure and aren't manageable by legacy contract systems. Thus, integrating OTs as a core functionality within our Contract Writing solution is critical to address this management gap and significantly expand our addressable market.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cw-ota-discovery">
+      <!-- DISCOVERY -->
+      <div class="two-column-content w-80 mb-50">
+        <div class="header-column">
+            <h6 class="mb-075">Discovery</h6>
+            <p class="n5">Identifying our target user personas and guiding use cases</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>To support our goal of broadening our market reach, we had to go beyond traditional Contracting Officer (CO) personas and define the needs of a new key user: the Agreement Officer (AO). I conducted extensive research by:</p>
+            <ul class="mt-07 mb-20">
+              <li>Interviewing key stakeholders, including internal subject matter experts and contracting personnel from agencies like NASA</li>
+              <li>Performing detailed policy analysis using official resources, such as online guides from MITRE and the Department of Defense, along with example agreements from agencies like ARPA-H and DARPA</li>
+            </ul>
+            <p>This helped us formalize our primary user persona and identify key differences between AOs and COs. While COs operate under the Federal Acquisition Regulation (FAR) and emphasize strict compliance, AOs execute OTs under special statutory authority, allowing them to prioritize flexibility, speed, and exemption from most FAR requirements.</p>
+        </div>
+      </div>
+
+      <div class="two-column-image mb-50">
+        <div>
+          <div class="image-container mb-10">
+            <img src="/assets/images/cw-ao-user-persona.png" />
+          </div>
+          <p class="n5">Agreement Officer User Persona</p>
+        </div>
+        <div>
+        <div class="image-container mb-10">
+          <img src="/assets/images/cw-cs-user-persona.png" />
+        </div>
+        <p class="n5">Agreement Specialist User Persona</p>
+        </div>
+      </div>
+
+      <div class="two-column-content w-80">
+        <div class="header-column"></div>
+        <div class="content-column"> 
+            <p>With a deeper understanding of our target user, my product manager and I translated key user pain points and needs directly into essential product goals for our minimum viable product. Given the feature’s large scope, our product and stakeholder teams agreed to prioritize establishing a solid foundation for core user functions by focusing on the most critical use cases first. This phased approach, breaking the solution into several releases, ensured that our initial launch directly addressed the highest-priority needs of the Agreement Officer while maintaining a manageable development roadmap.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT GOALS -->
+    <section id="cw-ota-product-goals" class="bg-n2">
+      <div class="two-column-content w-80">
+        <div class="header-column">
+          <h6 class="mb-075">Product Goals</h6>
+          <p class="n5 mb-075">Enabling speed, flexibility and compliance</p>
+        </div>
+        
+        <div class="content-column"> 
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">1</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Seamless End-to-End Agreement Management</p>
+                <p class="mt-025 mb-30">Enable rapid innovation by providing a seamless workflow that allows teams to instantly create, track, finalize, approve, and release all transaction agreements</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">2</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Ensure Consistency with Template-Driven Agreements</p>
+                <p class="mt-025 mb-30">Drastically reduce drafting time and eliminate errors by leveraging preset agreement text templates and logic-based auto-population capabilities</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">3</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Centralize Performer Data</p>
+                <p class="mt-025 mb-30">Mitigate compliance risks and streamline contract referencing by centralizing vendor, consortium and institution data in a unified system</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">4</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Ensure Financial Accuracy Through Line Item Funding</p>
+                <p class="mt-025">Track and allocate funds at the line item level to minimize budget errors and eliminate overspending risk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="cw-ota-ideation">
+      <!-- IDEATION -->
+      <div class="two-column-content w-80 mb-50">
+        <div class="header-column">
+            <h6 class="mb-075">Ideation</h6>
+            <p class="n5">Mapping out the key user flows</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>After gathering consensus on the primary goals, the next step was translating these strategic priorities into a tangible user experience. I mapped out the key user flows, detailing the step-by-step process users would follow to achieve each objective. This process was critical for defining how OTs would be seamlessly integrated into the existing contract writing solution.</p>
+        </div>
+      </div>
+
+      <div class="mb-50">
+        <div class="image-container mb-10">
+          <img src="/assets/images/cw-ota-user-flows.png" />
+        </div>
+        <p class="n5">Key user flows for supporting OT agreements</p>
+      </div>
+
+      <div>
+        <div class="image-container mb-20">
+          <img src="/assets/images/cw-ota-architecture.png" />
+        </div>
+        <p class="n5">Site architecture showing how OTs will be integrated into Contract Writing</p>
+      </div>
+    </section>
+
+    <section id="cw-ota-design-validation">
+      <!-- DESIGN & VALIDATION -->
+      <div class="two-column-content w-80 mb-50">
+        <div class="header-column">
+            <h6 class="mb-075">Design & Validation</h6>
+            <p class="n5">-----</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>To translate the product goals into a tangible solution, I began by conceptualizing the design through initial wireframes. These early artifacts served to facilitate conversations and quickly align cross-functional teams on a shared high-level vision, culminating in a successful early feature demo with a potential customer agency.. The validation received from this demo then propelled the process into rapid prototyping using Appian’s low-code SAIL framework, finalizing the design structure based on real-world feedback.</p>
+        </div>
+      </div>
+
+      <div class="mb-50">
+        <div class="image-container mb-10">
+          <img src="/assets/images/cw-ota-wireframes.png" />
+        </div>
+        <p class="n5">Wireframes to illustrate each user flow</p>
+      </div>
+
+      <div class="two-column-image mb-50">
+        <div>
+          <div class="image-container mb-10">
+            <img src="/assets/images/cw-co-user-persona.png" />
+          </div>
+          <p class="n5">A personalized landing page displaying agreements the user is actively managing, ensuring quick access to high-priority workflows</p>
+        </div>
+        <div>
+        <div class="image-container mb-10">
+          <img src="/assets/images/cw-cs-user-persona.png" />
+        </div>
+        <p class="n5">A consolidated overview of the agreement, highlighting essential details and actionable tasks</p>
+        </div>
+      </div>
+
+      <div class="two-column-image">
+        <div>
+          <div class="image-container mb-10">
+            <img src="/assets/images/cw-co-user-persona.png" />
+          </div>
+          <p class="n5">The agreement text update form leveraging auto-population to instantly fill dynamic fields, enabling rapid, error-free drafting</p>
+        </div>
+        <div>
+        <div class="image-container mb-10">
+          <img src="/assets/images/cw-cs-user-persona.png" />
+        </div>
+        <p class="n5">The agreement file detail view showcasing built-in AI capabilities, including document summarization and an interactive chatbot, to provide quick access to key insights</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cw-ota-impact" class="bg-n2">
+      <!-- IMPACT -->
+      <div class="two-column-content w-80">
+        <div class="header-column">
+            <h6 class="mb-075">Impact</h6>
+            <p class="n5">Feature release and results</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>Delivered as part of Appian’s Contract Writing solution, this feature was launched across multiple releases between April and September 2024. The successful rollout and design effectiveness were publicly validated by an official demo at the Appian World 2024 conference, where it received overwhelmingly positive feedback from various customer agencies.</p>
+            <p class="mt-07">The most critical validation came directly from users, underscoring the feature's immediate value:</p>
+            <p class="mt-07">“This is so much better than what we use now! With our current system, PRISM, there’s no way of distinguishing between OTs and standard FAR contracts, so this would definitely give us a lot more flexibility.”</p>
+            <p class="mt-07">This feedback confirmed the design's strategic goal: providing the flexibility and differentiation required to manage OTs effectively.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cw-ota-future-considerations">
+      <!-- FUTURE CONSIDERATIONS -->
+      <div class="two-column-content w-80">
+        <div class="header-column">
+            <h6 class="mb-075">Future Considerations</h6>
+            <p class="n5">Looking ahead at the roadmap</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p class="mb-30">With the minimum viable product receiving such positive feedback, the next phase would focus on capabilities that can further enhance the value of our OT management solution to address customer needs, such as:</p>
+            
+            <div class="mb-30">
+            <div class="product-goal">
+              <div class="sbs-number">
+                <div class="sbs-left">
+                    <p class="bold">1</p>
+                </div>
+                <div class="sbs-right">
+                    <p class="bold">Complex Agreement Management</p>
+                    <p class="mt-025 mb-30">Add parent-child relationship functionality to allow funding limits on parent agreements to automatically cascade to child agreements, ensuring enhanced financial allocation control</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-goal">
+              <div class="sbs-number">
+                <div class="sbs-left">
+                    <p class="bold">2</p>
+                </div>
+                <div class="sbs-right">
+                    <p class="bold">Template Customization with a Terms & Conditions Library</p>
+                    <p class="mt-025">Provide greater flexibility for agreement text customization by implementing a Terms and Conditions library. Users can quickly add pre-approved contractual articles, balancing rapid drafting speed with tailored contract requirements.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <p>This would ensure the solution evolves to handle the most complex agreements, solidifying its role as the authoritative, flexible system for end-to-end OT management.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="bg-n2">
+        <div class="sbs-work align-top">
+          <div id="work-description">
+            <h2>Work</h2>
+            <p>A deeper dive into my UX case studies</p>
+          </div>
+          <div class="align-right mt-15 mb-105">
+            <div class="sbs-work-cards">
+                <a href="index.html">
+                    <div class="project-card-small">
+                        <img src="/assets/images/asds.png" alt="Appian Solutions Design System" />
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="project-card-small">
+                        <img src="/assets/images/cw.png" alt="Government Contract Writing" />
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="project-card-small">
+                        <img src="/assets/images/ai_copilot.png" alt="Government Procurement AI Copilot" />
+                    </div>
+                </a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-forest">
+      <div class="sbs align-bottom">
+        <div class="sbs-left">
+          <h2 class="sage">About</h2>
+        </div>
+        <div class="sbs-right" id="about-description">
+          <p class="n1 align-right">Get to know a little bit more about my design background and other fun tidbits</p>
+        </div>
+      </div>
+      <div class="sbs align-bottom mt-30 mb-10">
+        <div class="sbs-left">
+          <div class="about-image-small">
+            <img src="/assets/images/profile-image.JPG" alt="A profile image of Kyra">
+          </div>
+        </div>
+        <div class="sbs-right">
+          <div class="sbs-social-media">
+            <a href="mailto:kyratichan@gmail.com" target="_blank">
+              <div id="icon-email" class="icon-forest"></div>
+          </a>
+          <a href="https://www.linkedin.com/in/kyratichan/" target="_blank">
+              <div id="icon-linkedin" class="icon-forest"></div>
+          </a>
+          <a href="https://instagram.com/kyratichan23" target="_blank">
+              <div id="icon-instagram" class="icon-forest"></div>
+          </a>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kyra Chan | UX Designer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -15,22 +18,59 @@
 
   <main>
     <section id="title">
-      <div class="sbs">
+      <div class="sbs mb-30">
         <div class="sbs-left">
           <h1>Kyra Chan</h1>
         </div>
         <div class="sbs-right" id="title-description">
-          <p class="align-right mb-15">Product designer interested in creating seamless experiences that simplify complex problems. Currently based in Brooklyn designing government acquisition management systems for Appian.</p>
+          <p class="align-left mb-15">Product designer interested in creating seamless experiences that simplify complex problems. Currently based in Brooklyn designing government acquisition management systems for Appian.</p>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="column">
+          <a href="case-studies/cw-ota.html">
+            <div class="project-card bg-blue">
+              <div class="project-card-contents">
+                <div class="tag">
+                  <p class="tag-text n5">Appian</p>
+                </div>
+                <h3 class="mt-025 n6">Solutions Design System</h3>
+              </div>
+              <img class="mockup" src="assets/images/asds-mockup.png" alt="Appian Solutions Design System" />
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a href="case-studies/cw.html">
+            <div class="project-card bg-purple">
+              <div class="project-card-contents">
+                <div class="tag">
+                  <p class="tag-text n5">Appian</p>
+                </div>
+                <h3 class="mt-025 n6">Contract Writing</h3>
+              </div>
+              <img class="mockup" src="assets/images/cw-mockup.png" alt="Government Contract Writing" />
+            </div>
+            
+          </a>
+        </div>
+        <div class="column">
+          <a href="index.html">
+            <div class="project-card">
+                <img src="assets/images/ai_copilot.png" alt="Government Procurement AI Copilot" />
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="work" class="bg-n2">
-      <h2>Case Studies</h2>
+    <!-- <section id="work" class="bg-n2">
+      <h2>Case Studies</h2> -->
       <!-- Add project cards or links here -->
-    </section>
+    <!-- </section> -->
 
-    <section id="playground">
+    <section id="playground" class="bg-n2">
       <h2 id="playground-title">Playground</h2>
       <div class="sbs align-bottom">
         <div class="sbs-left" id="playground-description">
@@ -66,7 +106,7 @@
           <p class="n1 align-right">Get to know a little bit more about my design background and other fun tidbits</p>
         </div>
       </div>
-      <div class="sbs align-bottom mt-45 mb-10">
+      <div class="sbs align-bottom mt-30 mb-10">
         <div class="sbs-left">
           <div class="about-image-small">
             <img src="assets/images/profile-image.JPG" alt="A profile image of Kyra">
@@ -91,20 +131,7 @@
   </main>
 
   <footer>
-    <section id="footer" class="bg-sky">
-      <div class="sbs">
-        <div class="sbs-left">
-          <p class="salma-pro forest"><a href="mailto:kyratichan@gmail.com">kyratichan@gmail.com</a></p>
-        </div>
-        <div class="sbs-right">
-          <div class="line-between">
-            <p class="salma-pro forest side-text">Design and Development</p>
-            <div class="divider-short bg-forest"></div>
-            <p class="salma-pro forest side-text">Kyra Chan</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="footer-container"></div>
   </footer>
 
   <script src="script.js"></script>
