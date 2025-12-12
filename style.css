@@ -41,6 +41,10 @@ html {
 }
 
 /* Colors */
+.bg-n1 {
+  background-color: #F9F9F2;
+}
+
 .bg-n2 {
   background-color: #F2F2EB;
 }
@@ -571,7 +575,15 @@ header {
 }
 
 .sbs-number {
-  align-items: top;
+  align-items: flex-start;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.sbs-align-bottom {
+  align-items: flex-end;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
@@ -635,6 +647,11 @@ header {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 2rem;
 }
 
 .list {
@@ -808,14 +825,16 @@ header {
   margin-top: 0.5rem;
 }
 
-.mt-07 {
-  margin-top: 0.7rem;
+.mt-075 {
+  margin-top: 0.75rem;
 }
 
 .mt-15 {
   margin-top: 1.5rem;
 }
-
+.mt-20 {
+  margin-top: 2rem;
+}
 .mt-30 {
   margin-top: 3rem;
 }
@@ -1092,6 +1111,11 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.quote {
+  width: auto;
+  height: 48px;
 }
 
 .mockup {
