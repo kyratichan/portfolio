@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Fetch Dynamic Playground Preview Image
+  /* Fetch Dynamic Playground Preview Image */
   const mainPreviewImage = document.getElementById('play-preview');
   const playRows = document.querySelectorAll('.play-projects-container .play-row');
 
-  // Store the initial image source to revert on mouseleave
+  /* Store the initial image source to revert on mouseleave */
   const initialImageSrc = mainPreviewImage ? mainPreviewImage.src : '';
 
   if (mainPreviewImage && playRows.length > 0) {
@@ -71,12 +71,49 @@ document.addEventListener('DOMContentLoaded', () => {
               }
           });
 
-          // Revert to the initial image when the mouse leaves the row
+          /* Revert to the initial image when the mouse leaves the row */
           row.addEventListener('mouseleave', () => {
               mainPreviewImage.src = initialImageSrc; 
           });
       });
   }
+
+  /* Displaying the receipt over each ceramic item */
+  let mouseX = 0;
+  let mouseY = 0;
+
+  document.querySelectorAll('.ceramic-item').forEach(item => {
+    const receipt = item.querySelector('.receipt-overlay');
+
+    item.addEventListener('mousemove', (e) => {
+        // 2. Update global coordinates
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        const x = mouseX + 15; 
+        const y = mouseY + 15;
+
+        receipt.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    item.addEventListener('mouseenter', () => {
+        receipt.style.opacity = "1";
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        receipt.style.opacity = "0";
+    });
+
+    // 3. Update position during scroll so it doesn't jump to 0,0
+    window.addEventListener('scroll', () => {
+        // Only move it if it's currently visible
+        if (receipt.style.opacity === "1") {
+            const x = mouseX + 15;
+            const y = mouseY + 15;
+            receipt.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    }, { passive: true });
+  });
 
   /* Fetching footer */
   fetch('footer.html')

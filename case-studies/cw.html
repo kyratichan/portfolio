@@ -6,7 +6,7 @@
   <title>Kyra Chan | UX Designer</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
-<body>
+<body class="case-study">
   <header>
     <!-- Navbar -->
     <div id="navbar"></div>
@@ -14,23 +14,21 @@
   </header>
 
   <main>
+    <section id=""cw-hero" class="parallax" style="background-image: url('/assets/images/cw-ota/cw-ota-cover-wide.png');">
+        <div class="w-80">
+            <div class="content-overlay">
+                <div class="tag mb-25">
+                  <p class="tag-text n5">Appian</p>
+                </div>
+                <h2 class="mb-15">Contract Writing</h2>
+                <p>A centralized, configurable solution that streamlines the procurement process by simplifying contract creation, management, and tracking for government agencies</p>
+            </div>
+        </div>
+    </section>
+
     <section id="cw-overview">
-      <!-- TITLE & DESCRIPTION -->
-      <div class="sbs mb-50 align-top">
-        <div class="sbs-left">
-          <h2>Contract Writing</h2>
-        </div>
-        <div class="sbs-right" id="title-description">
-          <p class="align-left">A centralized, configurable solution that streamlines the procurement process by simplifying contract creation, management, and tracking for government agencies</p>
-        </div>
-      </div>
-
-      <div class="image-container mb-50">
-        <img src="/assets/images/cw-mockup.png" alt="Government Contract Writing" />
-      </div>
-
       <!-- PROJECT DETAILS & BACKGROUND -->
-      <div class="two-column mb-50">
+      <div class="two-column w-80 mb-50">
         <div class="project-details-container mt-025">
             
             <div class="detail-field">
@@ -50,7 +48,7 @@
 
             <div class="detail-field">
                 <p class="salma-pro n5">Role</p>
-                <p class="mt-025">UX/UI, AI</p>
+                <p class="mt-025">UX/UI</p>
             </div>
         </div>
         
@@ -59,21 +57,13 @@
         </div>
       </div>
 
-      <!-- IMAGE GALLERY -->
-      <div class="two-column-image mb-50">
-        <div class="image-container">
-          <img src="/assets/images/cw-mockup.png" alt="Contract Writing Dashboard" />
-        </div>
-        <div class="image-container">
-          <img src="/assets/images/cw-mockup.png" alt="Contract Writing Dashboard" />
-        </div>
-      </div>
+      <div class="divider w-80 mb-60"></div>
 
       <!-- THE CHALLENGE -->
-      <div class="two-column-content w-80">
+      <div class="two-column-content w-80 mb-10">
         <div class="header-column">
             <h6 class="mb-075">The Challenge</h6>
-            <p class="n5">Simplifying contract management and reducing procurement action lead time (PALT)</p>
+            <p class="n5">Streamlining management to accelerate procurement cycles</p>
         </div>
         
         <div class="content-column"> 
@@ -134,88 +124,210 @@
     <section id="cw-research-analysis">
       <!-- RESEARCH AND ANALYSIS -->
       <div class="two-column-content w-80 mb-50">
-        <div class="header-column">
+        <div class="header-column"> 
             <h6 class="mb-075">Research and Analysis</h6>
-            <p class="n5">Understanding contracting personnel priorities and defining the underlying structure</p>
+            <p class="n5">Translating user priorities into a scalable structural foundation</p>
         </div>
         
         <div class="content-column"> 
-            <p>Since the industry and requirements for the contract writing solution was already established, I focused on reading documentation about public sector use cases for my initial ramp-up. From these resources, I refined the user personas and information architecture.</p>
+            <p>Since the industry and requirements for the contract writing solution were already established, I focused on reading documentation about public sector use cases for my initial ramp-up. From these resources, I refined the user personas and information architecture.</p>
             <br>
             <p class="bold mt-05 mb-10">Core Personas</p>
 
-            <p class="">Requisitioner / Program Office / Contracting Officer Representatives (COR)</p>
+            <p class="">Requestor / Program Office</p>
             <ul class="mt-025 mb-15">
               <li>Responsible for defining a detailed scope of goods and services needed, drafting all required documents, and setting a realistic budget and timeline expectations</li>
             </ul>
 
-            <p class="mt-075">Contracting Officers (CO) / Contracting Specialists (CS)</p>
+            <p class="mt-075">Contracting Personnel</p>
             <ul class="mt-025">
-              <li>
+              <li class="mb-050">
                 Responsible for ensuring that the government is making an informed buying decision and negotiating a fair, equitable and beneficial contract within a realistic timeline
               </li>
-              <li>
+              <li class="mb-050">
                 Process submitted requirements and requisitions into solicitations and/or awards, including amendments and modifications
               </li>
-              <li>
+              <li class="mb-050">
                 Sign awards and warrant amounts prior to signatures
               </li>
             </ul>
         </div>
       </div>
 
-      <div class="two-column-image mb-50">
+      <div class="two-column-image mb-30">
         <div>
-          <div class="image-container mb-10">
-            <img src="/assets/images/cw-co-user-persona.png" alt="Contracting Officer User Persona" />
+          <div class="image-container">
+            <img src="/assets/images/cw/cw-co-user-persona.png" />
           </div>
-          <p class="n5">Contracting Officer User Persona</p>
         </div>
         <div>
-        <div class="image-container mb-10">
-          <img src="/assets/images/cw-cs-user-persona.png" alt="Contract Specialist User Persona" />
+        <div class="image-container">
+          <img src="/assets/images/cw/cw-cs-user-persona.png" />
         </div>
-        <p class="n5">Contract Specialist User Persona</p>
         </div>
       </div>
 
-      <div class="two-column-content w-80 mb-50">
+      <div class="two-column-image mb-50">
+        <div>
+          <div class="image-container">
+            <img src="/assets/images/cw/cw-requestor-user-persona.png" />
+          </div>
+        </div>
+        <div>
+        <div class="image-container">
+          <img src="/assets/images/cw/cw-pm-user-persona.png" />
+        </div>
+        </div>
+      </div>
+
+      <div class="two-column-content w-80">
         <div class="header-column"></div>
         
         <div class="content-column"> 
             <p class="bold mt-05 mb-10">Information Architecture</p>
-
-            <p class="">While the general site architecture was already somewhat established, the architecture of the detail views for each Solicitation and Award required more attention.</p>
-            <p class="mt-075">The original information architectures for our record views were based on what we had for other solutions within the suite offering and did not follow UX best practices as it was too flat, leading to an overload of tabs that made it difficult to scan and sections that seemed duplicative. I worked with my product manager and stakeholders to propose an alternative sitemap to improve discoverability –– one with a more balanced hierarchy and intermediate sub-levels to help the user contextualize the information in each section.</p>
+            <p class="mt-075">While the high-level site architecture was largely established, the detail views for Solicitations and Awards required a more granular focus. The original architecture for these views was too flat, overwhelming users with an endless row of tabs and duplicative data. To improve discoverability, I facilitated a card sorting exercise with my product manager and stakeholders to inform a sitemap overhaul. We replaced the clutter with a balanced hierarchy and sub-navigation, helping users better contextualize information and orient themselves within complex datasets.</p>
         </div>
       </div>
     </section>
 
-    <section id="cw-research-analysis">
-      <!-- DESIGNING THE SOLUTION -->
+    <section id="cw-visual-brand" class="bg-n2">
+      <!-- DEFINING THE VISUAL BRAND -->
       <div class="two-column-content w-80 mb-50">
         <div class="header-column">
-            <h6 class="mb-075">Designing the Solution</h6>
+            <h6 class="mb-075">Defining the Visual Brand</h6>
             <p class="n5">Modernizing the Government Acquisitions suite</p>
         </div>
         
         <div class="content-column"> 
-            <p>Because the government acquisitions suite was one of the first Appian solution offerings, most of the other solutions had a very outdated look and feel. With Contract Writing being the core product of the solution suite, we wanted to use this opportunity to push for a modern redesign that would serve as a key market differentiator for Appian. The Solutions UX team deliberately selected a contemporary color palette that consisted of eight colors in four saturations, along with four blue-gray neutral tones.</p>
+            <p>As one of Appian’s foundational offerings, the Government Acquisitions suite carried a legacy aesthetic that felt outdated compared to modern standards. With Contract Writing serving as the suite’s flagship product, we leveraged this redesign to establish a new visual North Star—positioning the suite as a key market differentiator. The Solutions UX team introduced a contemporary design system, anchored by a sophisticated color palette of nine core colors across six saturations, balanced by neutral blue-gray tones for a professional, high-density interface.</p>
         </div>
       </div>
 
-      <div class="two-column-image mb-50">
-        <div>
-          <div class="image-container mb-10">
-            <img src="/assets/images/cw-co-user-persona.png" alt="Contracting Officer User Persona" />
+      <div class="card w-80 mb-10 bg-n3">
+        <div class="palette-grid">
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #9F0019;"></div>
+            <div class="swatch" style="background-color: #B2002C;"></div>
+            <div class="swatch" style="background-color: #DE0037;"></div>
+            <div class="swatch" style="background-color: #FDADAD;"></div>
+            <div class="swatch" style="background-color: #FED7DE;"></div>
+            <div class="swatch" style="background-color: #FDEDF0;"></div>
           </div>
-          <p class="n5">Contracting Officer User Persona</p>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #995C00;"></div>
+            <div class="swatch" style="background-color: #CC7600;"></div>
+            <div class="swatch" style="background-color: #FAA92F;"></div>
+            <div class="swatch" style="background-color: #FFDCA3;"></div>
+            <div class="swatch" style="background-color: #FFEED3;"></div>
+            <div class="swatch" style="background-color: #FFF5E6;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #856C00;"></div>
+            <div class="swatch" style="background-color: #FFC008;"></div>
+            <div class="swatch" style="background-color: #FFD948;"></div>
+            <div class="swatch" style="background-color: #FDEB93;"></div>
+            <div class="swatch" style="background-color: #FFF6C9;"></div>
+            <div class="swatch" style="background-color: #FFFCEB;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #0A4D00;"></div>
+            <div class="swatch" style="background-color: #117C00;"></div>
+            <div class="swatch" style="background-color: #1CC101;"></div>
+            <div class="swatch" style="background-color: #B2EAB1;"></div>
+            <div class="swatch" style="background-color: #E3FBDF;"></div>
+            <div class="swatch" style="background-color: #EDF7EE;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #2C6770;"></div>
+            <div class="swatch" style="background-color: #31808B;"></div>
+            <div class="swatch" style="background-color: #56ADC0;"></div>
+            <div class="swatch" style="background-color: #A5E8E8;"></div>
+            <div class="swatch" style="background-color: #E2FAF9;"></div>
+            <div class="swatch" style="background-color: #E7F8F8;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #0C4283;"></div>
+            <div class="swatch" style="background-color: #115EBB;"></div>
+            <div class="swatch" style="background-color: #3F8EEE;"></div>
+            <div class="swatch" style="background-color: #B8D9FF;"></div>
+            <div class="swatch" style="background-color: #DBECFF;"></div>
+            <div class="swatch" style="background-color: #EBF4FF;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #020A50;"></div>
+            <div class="swatch" style="background-color: #152B99;"></div>
+            <div class="swatch" style="background-color: #2322F0;"></div>
+            <div class="swatch" style="background-color: #DCDEF5;"></div>
+            <div class="swatch" style="background-color: #EDEEFA;"></div>
+            <div class="swatch" style="background-color: #F5F5FC;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #790DA1;"></div>
+            <div class="swatch" style="background-color: #962FEA;"></div>
+            <div class="swatch" style="background-color: #B561FF;"></div>
+            <div class="swatch" style="background-color: #D9AEFF;"></div>
+            <div class="swatch" style="background-color: #F2E9FF;"></div>
+            <div class="swatch" style="background-color: #F9F2FF;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #8C1565;"></div>
+            <div class="swatch" style="background-color: #BB117C;"></div>
+            <div class="swatch" style="background-color: #E21496;"></div>
+            <div class="swatch" style="background-color: #F7A7DA;"></div>
+            <div class="swatch" style="background-color: #FFDEF3;"></div>
+            <div class="swatch" style="background-color: #FFF5FB;"></div>
+          </div>
+
+          <div class="color-column">
+            <div class="swatch main" style="background-color: #0F0F16;"></div>
+            <div class="swatch" style="background-color: #2E2E35;"></div>
+            <div class="swatch" style="background-color: #6C6C75;"></div>
+            <div class="swatch" style="background-color: #DCDCE5;"></div>
+            <div class="swatch" style="background-color: #EDEDF2;"></div>
+            <div class="swatch" style="background-color: #F5F5F7;"></div>
+          </div>
         </div>
-        <div>
-        <div class="image-container mb-10">
-          <img src="/assets/images/cw-cs-user-persona.png" alt="Contract Specialist User Persona" />
+      </div>
+    </section>
+
+    <section id="cw-mockups">
+      <!-- MOCKUPS -->
+       <div class="two-column-content w-80 mb-80">
+        <div class="header-column">
+            <h6 class="mb-075">Designing the Solution</h6>
+            <p class="n5">Bridging complex data with intuitive workflows</p>
         </div>
-        <p class="n5">Contract Specialist User Persona</p>
+        
+        <div class="content-column"> 
+            <p>With the information architecture and visual brand defined, I translated these foundations into a system of high-density interfaces covering every stage of the acquisition process from solicitation to award. Each workflow was designed to consolidate massive procurement datasets into actionable views, streamlining the review process and increasing transparency across teams. This approach was validated by strong client interest and feedback, confirming the solution’s ability to turn fragmented tasks into a unified experience.</p>
+        </div>
+      </div>
+
+      <div class="two-column-content align-center w-80 mb-80">
+        <div class="content-column">
+          <img src="/assets/images/cw/cw-my-workspace.png" />
+        </div>
+        <div class="header-column">
+          <h6 class="mb-075">Centralized Workspace Navigation</h6>
+          <p class="n5">Streamline workflows by surfacing high-priority procurements and urgent tasks in a personalized view</p>
+        </div>
+      </div>
+
+      <div class="two-column-content align-center w-80 mb-10">
+        <div class="header-column">
+          <h6 class="mb-075">Personalized Home Dashboard</h6>
+          <p class="n5">Surfaces high-priority procurements and urgent tasks to help users stay oriented</p>
+        </div>
+        <div class="content-column">
+          <img src="/assets/images/cw/cw-my-workspace.png" />
         </div>
       </div>
     </section>
