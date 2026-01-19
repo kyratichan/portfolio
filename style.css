@@ -68,6 +68,10 @@ html {
   background-color: var(--color-n3);
 }
 
+.bg-n4 {
+  background-color: var(--color-n4);
+}
+
 .bg-forest {
   background-color: var(--color-forest);
 }
@@ -401,6 +405,37 @@ header {
   gap: 6rem;
 }
 
+.typography-container {
+  display: flex;
+  gap: 24px;
+}
+
+.typography-column {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.typography-item {
+  flex: 1;
+  background-color: #FDF7ED;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.typography-item img {
+  height: auto; /* Ensures aspect ratio is preserved */
+}
+
 .project-details-container {
   flex: 1;
   min-width: 0;
@@ -506,6 +541,20 @@ header {
   flex: 1 1 calc((100% - 2 * 24px) / 3);
   min-width: 0;
   transition: all 0.3s ease-in-out; 
+}
+
+.color-swatch {
+  /* This is the key: it makes each column take up exactly 1/3 (33.33%) of the container width. */
+  flex: 1 1 calc((100% - 4 * 24px) / 5);
+  min-width: 0;
+  transition: all 0.3s ease-in-out; 
+  aspect-ratio: 1 / 1; /* Makes every item square */
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ceramics-grid {
@@ -781,10 +830,10 @@ header {
 }
 
 /* Optional: Add a hover effect for a "portfolio" feel */
-.swatch:hover {
+/* .swatch:hover {
   filter: brightness(0.95);
   cursor: pointer;
-}
+} */
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -802,6 +851,7 @@ header {
 .card {
   border-radius: 16px;
   padding: 2rem;
+  flex-grow: 1;
 }
 
 .list {
@@ -1278,7 +1328,13 @@ p.tag-text {
   font-family: 'SalmaPro-Regular';
   font-size: 0.875rem;
   font-weight: normal;
-  margin-top: 0.25rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+}
+
+p.caption {
+  font-family: 'SalmaPro-Medium';
+  font-size: 0.875rem;
   letter-spacing: 0.12rem;
   text-transform: uppercase;
 }
