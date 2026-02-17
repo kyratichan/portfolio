@@ -29,6 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
           navbar.classList.toggle('active');
         });
       }
+
+      // Only run this if we are on a case study page
+    if (document.body.classList.contains('case-study')) {
+      const sections = document.querySelectorAll('section[data-nav-color]');
+      
+      const options = {
+        root: null,
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+        rootMargin: "0% 0px -100% 0px" // Triggers when section is near top
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const color = entry.target.getAttribute('data-nav-color');
+            // Apply the color to a CSS variable
+            document.documentElement.style.setProperty('--current-nav-bg', color);
+          }
+        });
+      }, options);
+
+      sections.forEach(section => observer.observe(section));
+      }
     })
     .catch(err => {
       console.error('Failed to fetch nav.html:', err);

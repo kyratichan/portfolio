@@ -6,15 +6,15 @@
     <title>Kyra Chan | UX Designer</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="case-study">
     <header>
         <!-- Navbar -->
         <div id="navbar"></div>
         <script src="script.js" defer></script> 
     </header>
 
-    <main id="background" class="mt-50">
-        <section id="about-page">
+    <main id="background">
+        <section id="about-page" data-nav-color=var(--color-n1)>
             <div class="two-column-sticky-scroll">
                 <aside class="sticky-column">
                     <div>
@@ -28,7 +28,7 @@
                     </div>
                 </aside>
                 
-                <div class="scrolling-column">
+                <div class="scrolling-column mt-40">
                     <h3>Driven by curiosity and empathy for others, I’m a product designer interested in blending distinctive design with intentional strategy.</h3>
                     <br><br>
                     <p>
@@ -103,33 +103,45 @@
             </div>
         </section>
 
-        <section id="work" class="bg-n2">
-            <div class="sbs-work align-top">
-              <div id="work-description">
-                <h2>Work</h2>
-                <p>A deeper dive into my UX case studies</p>
-              </div>
-              <div class="align-right mt-15 mb-105">
-                <div class="sbs-work-cards">
-                    <a href="index.html">
-                        <div class="project-card-small">
-                            <img src="assets/images/asds.png" alt="Appian Solutions Design System" />
-                        </div>
-                    </a>
-                    <a href="index.html">
-                        <div class="project-card-small">
-                            <img src="assets/images/cw.png" alt="Government Contract Writing" />
-                        </div>
-                    </a>
-                    <a href="index.html">
-                        <div class="project-card-small">
-                            <img src="assets/images/ai_copilot.png" alt="Government Procurement AI Copilot" />
-                        </div>
-                    </a>
+        <section id="work" class="bg-n2" data-nav-color=var(--color-n2)>
+        <div class="sbs-work align-top">
+          <div id="work-description">
+            <h2>Work</h2>
+            <p>A deeper dive into my UX case studies</p>
+          </div>
+          <div class="gallery-wrapper">
+            <div class="gallery">
+                <div class="column">
+                  <a href="/case-studies/cw.html">
+                    <div class="work-card-small" style="background-image: url(/assets/images/cw/cw-cover.png)">
+                      <div class="project-card-contents">
+                        <p class="work-text">Contract Writing</p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
-              </div>
+                <div class="column">
+                  <a href="/case-studies/acq.html">
+                    <div class="work-card-small" style="background-image: url(/assets/images/acq-landing-page/acq-cover.png)">
+                      <div class="project-card-contents">
+                        <p class="work-text">Acquisition Central</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="column">
+                  <a href=/case-studies/aidb.html">
+                    <div class="work-card-small" style="background-image: url(/assets/images/aidb/aidb-cover.png)">
+                    <div class="project-card-contents">
+                        <p class="work-text">Document Builder</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
             </div>
-          </section>
+          </div>
+        </div>
+    </section>
     </main>
 
     <footer>

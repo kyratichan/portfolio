@@ -42,13 +42,14 @@ html {
 
 /* Colors */
 :root {
+  --current-nav-bg: #F9FAFA; /* Default state */
   --color-white: #FFFFFF;
   --color-n1: #F9FAFA;
   --color-n2: #F1F5F5;
   --color-n3: #E5ECEC;
   --color-n4: #CBD4D4;
-  --color-n5: #879191;
-  --color-n6: #576161;
+  --color-n5: #6A7070;
+  --color-n6: #454A4A;
   --color-forest: #15616D;
   --color-sage: #C5EEF0;
   --color-sky: #B7CFE2;
@@ -314,8 +315,40 @@ header {
   padding: 2rem 6rem 2rem;
 }
 
-.case-study .navbar {
+/* .case-study .navbar {
   background-color: transparent;
+} */
+
+.case-study .navbar {
+  position: fixed; /* Ensures it stays visible during the transition */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transform: translateZ(0); 
+  will-change: background;
+  /* -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; */
+  /* backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); */
+
+  /* Use a more robust timing function */
+  transition: background 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+  background: linear-gradient(
+    to bottom, 
+    var(--current-nav-bg) 0%,
+    var(--current-nav-bg) 20%,
+    rgb(from var(--current-nav-bg) r g b / 0.8) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  background-blend-mode: normal;
+}
+
+/* This class will be added via JS once you leave the hero section */
+.case-study .navbar.scrolled {
+  background: transparent; 
 }
 
 .navbar .logo a {
@@ -399,6 +432,13 @@ header {
   gap: 3rem;
 }
 
+.three-column-image {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap; 
+  align-items: flex-start;
+}
+
 .two-column-content {
   align-items: flex-start;
   display: flex;
@@ -424,7 +464,6 @@ header {
 
 .typography-item {
   flex: 1;
-  background-color: #FDF7ED;
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -529,18 +568,36 @@ header {
 }
 
 /* Gallery Layout */
+.gallery-wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
 .gallery {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
+  column-gap: 1.5rem;
   margin: 0 auto;
 }
 
 .column {
   /* This is the key: it makes each column take up exactly 1/3 (33.33%) of the container width. */
-  flex: 1 1 calc((100% - 2 * 24px) / 3);
+  flex: 1 1 calc((100% - 2 * 1.5rem) / 3);
   min-width: 0;
   transition: all 0.3s ease-in-out; 
+}
+
+@media (max-width: 992px) {
+  .gallery {
+    /* Optional: change gap for mobile to keep it tight */
+    row-gap: 2rem; 
+  }
+
+  .column {
+    /* Forces each column to take up the full width */
+    flex: 1 1 100%;
+  }
 }
 
 .color-swatch {
@@ -618,6 +675,30 @@ header {
   margin: 5px 0;
 }
 
+.work-card {
+  flex: 1 1 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 4px rgba(69, 74, 74, 0.04), 
+              0 8px 16px rgba(69, 74, 74, 0.06);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+}
+
+a:hover .work-card {
+  transform: translateY(-4px) scale(1.02); /* Expands by 3% */
+  box-shadow: 0 4px 8px rgba(69, 74, 74, 0.06), 
+    0 20px 40px rgba(69, 74, 74, 0.12);
+}
+
 .project-card {
   flex: 1 1 100%;
   height: auto;
@@ -633,10 +714,10 @@ header {
 }
 
 .tag {
-  background-color: var(--color-white);
+  background-color: color-mix(in srgb, var(--color-white), transparent 40%);
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 24px;
+  padding: 0.1rem 0.6rem;
+  border-radius: 10px;
   margin-bottom: 12px;
 }
 
@@ -771,7 +852,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: 2rem;
+  gap: 10%;
   flex-wrap: wrap;
 }
 
@@ -783,6 +864,92 @@ header {
   justify-content: flex-end;
   flex-wrap: nowrap;
   overflow-x: auto;
+}
+
+@media (max-width: 992px) {
+  /* 1. Stack the layout and let height be determined by content */
+  .sbs-work {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto !important; /* Forces container to grow with the images */
+    gap: 2rem;
+  }
+
+  /* 2. Fix the description height and spacing */
+  #work-description {
+    flex: 0 0 auto; /* Stop it from trying to grow/stretch */
+    width: 100%;
+    max-width: 100%;
+    height: auto !important; /* Critical: removes fixed desktop height */
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  /* 3. Ensure the gallery wrapper doesn't restrict size */
+  .gallery-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 4. Make cards full width and fix the "Tiny Image" bug */
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .column {
+    flex: 1 1 100% !important; /* Overrides the desktop calc() */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .work-card {
+    width: 100%;
+    /* Keep aspect-ratio 1/1, but since container height is now 'auto', 
+       it will push the 'About' section down correctly */
+  }
+}
+
+@media (max-width: 992px) {
+  .sbs-work {
+    flex-direction: column;
+    align-items: flex-start; /* Stop stretching height on mobile */
+    gap: 2rem;
+  }
+  
+  #work-description {
+    flex: 1 1 auto;
+    max-width: 100%;
+    height: auto;
+    justify-content: flex-start; 
+    gap: 0rem; 
+  }
+}
+
+.work-card-small {
+  flex: 1 1 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 4px rgba(69, 74, 74, 0.02), 
+              0 6px 12px rgba(69, 74, 74, 0.04);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+}
+
+a:hover .work-card-small {
+  transform: translateY(-4px) scale(1.02); /* Expands by 3% */
+  box-shadow: 0 4px 8px rgba(69, 74, 74, 0.04), 
+    0 10px 20px rgba(69, 74, 74, 0.08);
 }
 
 .project-card-small {
@@ -851,6 +1018,12 @@ header {
 .card {
   border-radius: 16px;
   padding: 2rem;
+  flex-grow: 1;
+}
+
+.card-large {
+  border-radius: 16px;
+  padding: 3rem;
   flex-grow: 1;
 }
 
@@ -1019,6 +1192,10 @@ header {
   align-items: end;
 }
 
+.ml-010 {
+  margin-left: 0.1rem;
+}
+
 .ml-015 {
   margin-left: 0.15rem;
 }
@@ -1047,6 +1224,10 @@ header {
   margin-top: 0.75rem;
 }
 
+.mt-10 {
+  margin-top: 1rem;
+}
+
 .mt-15 {
   margin-top: 1.5rem;
 }
@@ -1059,12 +1240,20 @@ header {
   margin-top: 3rem;
 }
 
+.mt-40 {
+  margin-top: 4rem;
+}
+
 .mt-50 {
   margin-top: 5rem;
 }
 
 .mt-140 {
   margin-top: 16rem;
+}
+
+.mb-025 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-050 {
@@ -1135,10 +1324,14 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 310px;
-  flex: 1 1 300px;
-  min-width: 180px;
-  max-width: 180px;
+  flex: 0 0 180px;
+  align-self: stretch;
+  min-height: min-content;
+}
+
+#work-description p {
+  margin-top: auto; 
+  padding-bottom: 10px; 
 }
 
 /* Media query for mobile */
@@ -1178,8 +1371,9 @@ header {
 
   .sbs-work {
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     align-items: stretch;
+    justify-content: space-between;
   }
 
   .sbs-work-cards {
@@ -1197,15 +1391,6 @@ header {
   #playground-description {
     max-width: 500px;
     margin-bottom: 4rem;
-  }
-
-  #work-description {
-    align-items: start;
-    width: 100%;
-    max-width: 100%;
-    gap: 0.5rem;
-    height: auto;
-    flex: auto;
   }
 
   .project-card-small {
@@ -1271,7 +1456,7 @@ h2 {
 
 h3 {
   font-family: 'SalmaPro-Regular';
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 2.5rem;
   font-weight: 200;
   letter-spacing: -0.04rem;
@@ -1318,6 +1503,12 @@ p {
   font-size: 1.125rem;
 }
 
+p.work-text {
+  font-family: 'SalmaPro-Regular';
+  font-size: 1.25rem;
+  color: var(--color-n6);
+}
+
 p.receipt-text {
   margin-top: 0.1rem;
   font-size: 0.9rem;
@@ -1326,10 +1517,18 @@ p.receipt-text {
 
 p.tag-text {
   font-family: 'SalmaPro-Regular';
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+p.work-subtitle {
+  font-family: 'SalmaPro-Regular';
+  font-size: 0.9rem;
   letter-spacing: 0.12rem;
   text-transform: uppercase;
+  color: var(--color-n5);
 }
 
 p.caption {

@@ -6,28 +6,28 @@
   <title>Kyra Chan | UX Designer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="case-study">
   <header>
     <!-- Navbar -->
     <div id="navbar"></div>
     <script src="script.js" defer></script> 
   </header>
 
-  <main class="mt-50">
-    <section id="play-page">
+  <main>
+    <section id="play-page" data-nav-color=var(--color-n1)>
         <div class="two-column-sticky-scroll" id="background">
             <aside class="sticky-column">
                 <h2>Playground</h2>
                 <div class="play-image-large">
-                    <img id="play-preview" src="assets/images/jake-ariane/jake-ariane-wedding-preview.png" alt="Jake & Ariane's Wedding">
+                    <img id="play-preview" src="assets/images/pottery/pottery-preview.JPG" alt="Pottery Museum">
                 </div>
             </aside>
             
-            <div class="scrolling-column">
+            <div class="scrolling-column mt-40">
                 <p class="mt-05 mb-30">A sandbox of creative <span class="mobile-hide"><br></span> freelance projects</p>
                 <div class="play-projects-wrapper">
                 <div class="play-projects-container">
-                  <div class="play-row" data-preview-src="assets/images/filmic/filmic-preview.png">
+                  <div class="play-row" data-preview-src="assets/images/pottery/pottery-preview.JPG">
                       <div class="play-row-details">
                           <h3 class="mt-025 mb-075">
                               <a href="/playground/pottery.html">Pottery Museum</a>
@@ -50,7 +50,7 @@
                           <p>Wedding Stationery Design, Web Design, Illustration</p>
                       </div>
                       <div class="play-row-image">
-                          <img src="assets/images/jake-ariane/jake-ariane-wedding-image.png" alt="Jake & Ariane's Wedding">
+                          <img src="assets/images/jake-ariane/jake-ariane-wedding-image.jpg" alt="Jake & Ariane's Wedding">
                       </div>
                       <h4>2024</h4>
                   </div>
@@ -58,7 +58,7 @@
                   <div class="play-row" data-preview-src="assets/images/austin-linda/austin-linda-wedding-preview.jpeg">
                       <div class="play-row-details">
                           <h3 class="mt-025 mb-075">
-                              <a href="#">Austin & Linda's Wedding</a>
+                              <a href="/playground/austin-linda.html">Austin & Linda's Wedding</a>
                               <span class="arrow n5 ml-025">↗</span>
                           </h3>
                           <p>Wedding Stationery Design</p>
@@ -69,7 +69,7 @@
                       <h4>2023</h4>
                   </div>
 
-                  <div class="play-row" data-preview-src="assets/images/bellevue/bellevue-preview.png">
+                  <!-- <div class="play-row" data-preview-src="assets/images/bellevue/bellevue-preview.png">
                       <div class="play-row-details">
                           <h3 class="mt-025 mb-075">
                               <a href="/playground/bellevue.html">Bellevue</a>
@@ -81,9 +81,9 @@
                           <img src="assets/images/bellevue/bellevue-image.png" alt="Bellevue">
                       </div>
                       <h4>2022</h4>
-                  </div>
+                  </div> -->
 
-                  <div class="play-row" data-preview-src="assets/images/filmic/filmic-preview.png">
+                  <!-- <div class="play-row" data-preview-src="assets/images/filmic/filmic-preview.png">
                       <div class="play-row-details">
                           <h3 class="mt-025 mb-075">
                               <a href="#">Filmic Productions</a>
@@ -95,42 +95,54 @@
                           <img src="assets/images/filmic/filmic-image.png" alt="Filmic Productions">
                       </div>
                       <h4>2020</h4>
-                  </div>
+                  </div> -->
                 </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="work" class="bg-n2">
+    <section id="work" class="bg-n2" data-nav-color=var(--color-n2)>
         <div class="sbs-work align-top">
           <div id="work-description">
             <h2>Work</h2>
             <p>A deeper dive into my UX case studies</p>
           </div>
-          <div class="align-right mt-15 mb-105">
-            <div class="sbs-work-cards">
-                <a href="index.html">
-                    <div class="project-card-small">
-                        <img src="assets/images/asds.png" alt="Appian Solutions Design System" />
+          <div class="gallery-wrapper">
+            <div class="gallery">
+                <div class="column">
+                  <a href="/case-studies/cw.html">
+                    <div class="work-card-small" style="background-image: url(/assets/images/cw/cw-cover.png)">
+                      <div class="project-card-contents">
+                        <p class="work-text">Contract Writing</p>
+                      </div>
                     </div>
-                </a>
-                <a href="index.html">
-                    <div class="project-card-small">
-                        <img src="assets/images/cw.png" alt="Government Contract Writing" />
+                  </a>
+                </div>
+                <div class="column">
+                  <a href="/case-studies/acq.html">
+                    <div class="work-card-small" style="background-image: url(/assets/images/acq-landing-page/acq-cover.png)">
+                      <div class="project-card-contents">
+                        <p class="work-text">Acquisition Central</p>
+                      </div>
                     </div>
-                </a>
-                <a href="index.html">
-                    <div class="project-card-small">
-                        <img src="assets/images/ai_copilot.png" alt="Government Procurement AI Copilot" />
+                  </a>
+                </div>
+                <div class="column">
+                  <a href=/case-studies/aidb.html">
+                    <div class="work-card-small" style="background-image: url(/assets/images/aidb/aidb-cover.png)">
+                    <div class="project-card-contents">
+                        <p class="work-text">Document Builder</p>
+                      </div>
                     </div>
-                </a>
+                  </a>
+                </div>
             </div>
           </div>
         </div>
     </section>
 
-    <section id="about" class="bg-forest">
+    <section id="about" class="bg-forest" data-nav-color=var(--color-forest)>
       <div class="sbs align-bottom">
         <div class="sbs-left">
           <h2 class="sage">About</h2>
