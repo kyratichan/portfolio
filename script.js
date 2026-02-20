@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Current page:', currentPage);  // Log currentPage
 
   /* Loading nav bar */
-  fetch('${base}nav.html')
+  fetch(`${base}nav.html`)
     .then(res => res.text())
     .then(html => {
       const navbarContainer = document.getElementById('navbar');
@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Fetching icon svgs */
   const icons = [
-    { id: 'icon-email', path: '${base}/assets/icons/email-icon.svg' },
-    { id: 'icon-linkedin', path: '${base}/assets/icons/linkedin-icon.svg' },
-    { id: 'icon-instagram', path: '${base}/assets/icons/ig-icon.svg' }
+    { id: 'icon-email', path: `${base}assets/icons/email-icon.svg` },
+    { id: 'icon-linkedin', path: `${base}assets/icons/linkedin-icon.svg` },
+    { id: 'icon-instagram', path: `${base}assets/icons/ig-icon.svg` }
   ];
 
   icons.forEach(({ id, path }) => {
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* Fetching footer */
-  fetch('https://kyratichan.github.io/portfolio/footer.html')
+  fetch(`${base}footer.html`)
     .then(res => {
         if (!res.ok) {
             throw new Error('Network response was not ok');
