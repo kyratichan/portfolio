@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Current page:', currentPage);  // Log currentPage
 
   /* Loading nav bar */
-  fetch('/nav.html')
+  fetch('../nav.html')
     .then(res => res.text())
     .then(html => {
       const navbarContainer = document.getElementById('navbar');
