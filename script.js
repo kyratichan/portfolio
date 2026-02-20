@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // This checks if the URL contains 'case-studies' or 'playground'
+  const isSubfolder = window.location.pathname.includes('/case-studies/') || 
+                    window.location.pathname.includes('/playground/');
+
+  const base = isSubfolder ? '../' : './';
   const currentPage = window.location.pathname.split('/').pop().split('.')[0] || 'index';
   console.log('Current page:', currentPage);  // Log currentPage
 
   /* Loading nav bar */
-  fetch('https://kyratichan.github.io/portfolio/nav.html')
+  fetch('${base}nav.html')
     .then(res => res.text())
     .then(html => {
       const navbarContainer = document.getElementById('navbar');
@@ -59,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Fetching icon svgs */
   const icons = [
-    { id: 'icon-email', path: 'https://kyratichan.github.io/portfolio/assets/icons/email-icon.svg' },
-    { id: 'icon-linkedin', path: 'https://kyratichan.github.io/portfolio/assets/icons/linkedin-icon.svg' },
-    { id: 'icon-instagram', path: 'https://kyratichan.github.io/portfolio/assets/icons/ig-icon.svg' }
+    { id: 'icon-email', path: '${base}/assets/icons/email-icon.svg' },
+    { id: 'icon-linkedin', path: '${base}/assets/icons/linkedin-icon.svg' },
+    { id: 'icon-instagram', path: '${base}/assets/icons/ig-icon.svg' }
   ];
 
   icons.forEach(({ id, path }) => {
