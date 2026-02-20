@@ -57,6 +57,10 @@ html {
   --color-purple: #E3D4F1;
 }
 
+.bg-white {
+  background-color: var(--color-white);
+}
+
 .bg-n1 {
   background-color: var(--color-n1);
 }
@@ -588,6 +592,12 @@ header {
   transition: all 0.3s ease-in-out; 
 }
 
+.two-card-column {
+  flex: 0 0 calc(50% - 2rem); 
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 992px) {
   .gallery {
     /* Optional: change gap for mobile to keep it tight */
@@ -598,6 +608,67 @@ header {
     /* Forces each column to take up the full width */
     flex: 1 1 100%;
   }
+
+  .two-card-column {
+    margin-bottom: 0 !important;
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.carousel-slide {
+  
+  min-width: 100%;
+  flex: 0 0 100%;
+}
+
+.comparison-pair {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.comparison-pair img {
+  transform: translateZ(0);
+  border-radius: 16px;
+  width: calc(50% - 0.75rem); /* Exactly half width */
+  height: auto;
+  object-fit: cover;
+  display: block; /* Removes any tiny whitespace gaps at the bottom */
+}
+
+/* Dots Styling */
+.slider-dots {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-n4);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--color-forest);
 }
 
 .color-swatch {

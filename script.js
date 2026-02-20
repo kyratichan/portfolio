@@ -78,6 +78,81 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* Auto-play Vision Walkthrough Slide Deck */
+  (function() {
+    // We use a self-invoking function to keep the scope clean but active
+    let currentIndex = 0;
+    let autoPlayInterval;
+    let isMoving = false;
+
+    function initCarousel() {
+        const track = document.querySelector('.carousel-track');
+        const dots = document.querySelectorAll('.dot');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const container = document.querySelector('.carousel-container');
+
+        if (!track || slides.length === 0) return; // Safety check
+
+        // 1. Core Update Function
+        function updateSlide(index) {
+          if (isMoving) return; // Ignore clicks if we are already sliding
+          isMoving = true;
+
+          currentIndex = index;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          
+          dots.forEach((dot, i) => {
+              dot.classList.toggle('active', i === currentIndex);
+          });
+
+          // Match this timeout to your CSS transition duration (0.6s = 600)
+          setTimeout(() => {
+              isMoving = false;
+          }, 600);
+        }
+
+        // 2. Attach currentSlide to window so HTML onclick="currentSlide()" works
+        window.currentSlide = function(index) {
+            updateSlide(index);
+            stopAutoPlay();
+            startAutoPlay();
+        };
+
+        // 3. Autoplay Logic
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlide(currentIndex);
+        }
+
+        function startAutoPlay() {
+            if (!autoPlayInterval) {
+                autoPlayInterval = setInterval(nextSlide, 5000);
+                console.log("Carousel: Autoplay Started");
+            }
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+            console.log("Carousel: Autoplay Paused");
+        }
+
+        // 4. Hover to Pause
+        container.addEventListener('mouseenter', stopAutoPlay);
+        container.addEventListener('mouseleave', startAutoPlay);
+
+        // 5. Kickoff
+        startAutoPlay();
+    }
+
+    // Run once the DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+        initCarousel();
+    }
+})();
+
   /* Fetch Dynamic Playground Preview Image */
   const mainPreviewImage = document.getElementById('play-preview');
   const playRows = document.querySelectorAll('.play-projects-container .play-row');
