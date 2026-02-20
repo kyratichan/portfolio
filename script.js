@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Fetching icon svgs */
   const icons = [
-    { id: 'icon-email', path: 'assets/icons/email-icon.svg' },
-    { id: 'icon-linkedin', path: 'assets/icons/linkedin-icon.svg' },
-    { id: 'icon-instagram', path: 'assets/icons/ig-icon.svg' }
+    { id: 'icon-email', path: '../assets/icons/email-icon.svg' },
+    { id: 'icon-linkedin', path: '../assets/icons/linkedin-icon.svg' },
+    { id: 'icon-instagram', path: '../assets/icons/ig-icon.svg' }
   ];
 
   icons.forEach(({ id, path }) => {
