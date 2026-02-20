@@ -12,32 +12,22 @@ html {
 /* Fonts */
 @font-face {
   font-family: 'SalmaPro-Medium';
-  src: url('fonts/SalmaPro-Medium.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-  letter-spacing: 0.12rem;
+  src: url('/portfolio/fonts/SalmaPro-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'SalmaPro-Regular';
-  src: url('fonts/SalmaPro-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
+  src: url('/portfolio/fonts/SalmaPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'ITCGaramondStd-LtCond';
-  src: url('fonts/ITCGaramondStd-LtCond.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
+  src: url('/portfolio/fonts/ITCGaramondStd-LtCond.otf') format('otf');
 }
 
 @font-face {
   font-family: 'NeueHaasDisplay-Light';
-  src: url('fonts/NeueHaasDisplayLight.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-  letter-spacing: 0.03rem;
+  src: url('/portfolio/fonts/NeueHaasDisplayLight.ttf') format('ttf');
 }
 
 /* Colors */
