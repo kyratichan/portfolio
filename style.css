@@ -746,6 +746,30 @@ header {
   margin: 5px 0;
 }
 
+.feature-card {
+  padding: 3rem;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  overflow: hidden;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 4px rgba(69, 74, 74, 0.04), 
+              0 8px 16px rgba(69, 74, 74, 0.06);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+}
+
+a:hover .feature-card {
+  transform: translateY(-4px) scale(1.02); /* Expands by 3% */
+  box-shadow: 0 4px 8px rgba(69, 74, 74, 0.06), 
+    0 20px 40px rgba(69, 74, 74, 0.12);
+}
+
 .work-card {
   flex: 1 1 100%;
   width: 100%;

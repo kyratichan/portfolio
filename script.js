@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const track = document.querySelector('.carousel-track');
         const dots = document.querySelectorAll('.dot');
         const slides = document.querySelectorAll('.carousel-slide');
-        const container = document.querySelector('.carousel-container');
+        const container = document.querySelector('.carousel-track');
 
         if (!track || slides.length === 0) return; // Safety check
 
