@@ -14,24 +14,25 @@
   </header>
 
   <main>
-    <section id="acq-hero" class="parallax" data-nav-color="#D8F0F5" style="background-image: url('../assets/images/aidb/aidb-cover-wide.png');">
+    <section id="aidb-hero" class="parallax" data-nav-color="#D8F0F5" style="background-image: url('../assets/images/aidb/aidb-cover-wide.png');">
         <div class="w-80">
             <div class="content-overlay" style="max-width: 400px;">
                 <div class="tag mb-25">
                   <p class="tag-text n5 mt-025">Appian</p>
                 </div>
-                <h2 class="mb-15">Document Builder</h2>
-                <p>Bridging disparate systems to provide a unified view of the procurement landscape and streamlined access to essential workflows</p>
+                <h2 class="mb-15">Contract Text Workspace</h2>
+                <p>Transforming manual contract writing into an intelligent, AI-powered drafting experience</p>
             </div>
         </div>
     </section>
 
-    <section id="cw-overview" data-nav-color=var(--color-n1)>
-        <div class="w-80">
-            <h6 class="align-center">This page is still in progress. Please check back soon!</h6>
-        </div>
+    <section id="aidb-overview" data-nav-color=var(--color-n1)>
+      <!-- Empty State -->
+      <!-- <div class="w-80">
+          <h6 class="align-center">This page is still in progress. Please check back soon!</h6>
+      </div> -->
       <!-- PROJECT DETAILS & BACKGROUND -->
-      <!-- <div class="two-column w-80 mb-50">
+      <div class="two-column w-80 mb-50">
         <div class="project-details-container mt-025">
             
             <div class="detail-field">
@@ -56,24 +57,212 @@
         </div>
         
         <div class="project-background"> 
-            <p>The Appian Government Acquisition Management (GAM) suite provides specialized automation tools to streamline the federal procurement lifecycle. While these modular solutions offer deep functionality, the resulting fragmentation created information silos and "prioritization paralysis" for the contracting workforce. I spearheaded the product vision and proof of concept for the Acquisition Central hub, a centralized "command center" designed to consolidate disparate data and accelerate time-to-action for multi-solution customers.</p>
+            <p>While contract data is highly structured, manual text drafting remains a high-risk bottleneck. I spearheaded the product vision and high-fidelity prototyping for the AI-Powered Contract Text Workspace, transforming a generic document engine into an intelligent "writing partner" synced with live data. Stepping in during a critical resource shortage, I provided the UX leadership to architect a "North Star" proof of concept that directly addressed multi-million dollar customer requests and secured the roadmap for a high-value deal.</p>
         </div>
       </div>
 
-      <div class="divider w-80 mb-60"></div> -->
+      <div class="divider w-80 mb-60"></div>
 
       <!-- THE CHALLENGE -->
-      <!-- <div class="two-column-content w-80 mb-10">
+      <div class="two-column-content w-80 mb-10">
         <div class="header-column">
             <h6 class="mb-075">The Challenge</h6>
-            <p class="n5">Transforming fragmented tools to focused workflows</p>
+            <p class="n5">From static document generation to an intelligent writing partner</p>
         </div>
         
         <div class="content-column"> 
-            <p class="mb-20">Federal contracting professionals operate in a high-stakes environment where critical data is often scattered across multiple, disconnected modules. This fragmentation forces users to spend their mornings manually orienting themselves, toggling between applications just to piece together task statuses and upcoming milestones. Without a unified view, time-sensitive requirements are often obscured by routine administrative noise, leading to "prioritization paralysis" and increased operational risk.</p>
-            <p>We designed a centralized "command center" to serve as the definitive starting point for the acquisition workforce. By consolidating critical actions into a single interface, the hub shifts the user experience from manual data-hunting to strategic action — enabling contracting personnel to focus on high-level procurement strategy rather than administrative navigation.</p>
+            <p>While the core Contract Writing solution successfully automated structured data, the narrative drafting process remained a fragmented, manual bottleneck. Existing tools treated contracts as static files, forcing users to manually reconcile live data with complex legal text—a process prone to versioning errors and administrative fatigue. Although a generic AI Document Builder was already in production, it was not architected for the rigid regulatory formats or live data synchronization required by our most significant users. I defined and championed the long-term vision to extend this existing engine, transforming it into a specialized workspace that directly addressed the high-stakes demands of multi-million dollar customers.</p>
         </div>
-      </div> -->
+      </div>
+    </section>
+
+    <!-- PRODUCT GOALS -->
+    <section id="aidb-product-goals" class="bg-n2" data-nav-color=var(--color-n2)>
+      <div class="two-column-content w-80">
+        <div class="header-column">
+          <h6 class="mb-075">Product Goals</h6>
+          <p class="n5 mb-075">Driving efficiency, data integrity, and regulatory precision</p>
+        </div>
+        
+        <div class="content-column"> 
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">1</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Intelligent Drafting Assistance</p>
+                <p class="mt-025 mb-30">Transform a generic AI engine into a specialized writing partner capable of handling complex, regulatory contract language with high precision</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">2</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Automate Data Reconciliation</p>
+                <p class="mt-025 mb-30">Eliminate manual copy-pasting by syncing the document editor with live contract records, ensuring narrative text remains accurate and up-to-date</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-goal">
+            <div class="sbs-number">
+              <div class="sbs-left">
+                <p class="bold">3</p>
+              </div>
+              <div class="sbs-right">
+                <p class="bold">Enforce Structural Compliance</p>
+                <p class="mt-025 mb-30">Reduce administrative risk by embedding federal regulatory formatting and audit-ready versioning directly into the drafting workflow</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- IDEATION AND PROTOTYPING -->
+    <section id="acq-ideation" data-nav-color=var(--color-n1)>
+      <!-- IDEATION -->
+      <div class="two-column-content w-80 mb-30">
+        <div class="header-column">
+          <h6 class="mb-075">Defining the Workflow</h6>
+          <p class="n5">Architecting specialized functionality for high-stakes procurement</p>
+        </div>
+        
+        <div class="content-column"> 
+          <p class="mb-10">Before designing the interface, I mapped the end-to-end logic required to extend the existing document builder into a robust Contract Writing workspace. I defined five critical flows to bridge the gap between automated data and manual narrative drafting:</p>
+          <ul class="mt-025 mb-10">
+              <li class="mt-025">Configure Contract Format Templates</li>
+              <li class="mt-025">Generate Contract Text Using a Template</li>
+              <li class="mt-025">Manage Contract Sections</li>
+              <li class="mt-025">Draft and Refine Contract Text Using AI</li>
+              <li class="mt-025">Review Contract Sections</li>
+            </ul>
+          <!-- <ul class="mt-025">
+              <li class="mt-075"><span class="bold">Configure Contract Format Templates</span><br>Standardizing complex federal formats and automating template selection based on contract data</li>
+              <li class="mt-075"><span class="bold">Draft Contract Text</span><br>Assembling contract sections through automated context input and template-driven generation</li>
+              <li class="mt-075"><span class="bold">Manage Contract Sections</span><br>Updating auto-generated content and managing components within the Contract Text Workspace</li>
+              <li class="mt-075"><span class="bold">Text Block Writing & AI Refinement</span><br>Designing a "Human-in-the-Loop" model for users to prompt, iterate, and track revision history</li>
+              <li class="mt-075"><span class="bold">Review Contract Sections</span><br>Architecting status-based workflows to ensure team alignment through granular section reviews</li>
+            </ul> -->
+        </div>
+      </div>
+      
+      <div class="w-80 mb-80">
+        <div class="mb-10">
+          <img src="../assets/images/aidb/aidb-user-flows.png" />
+        </div>
+        <p class="n5">Key user flows for supporting OT agreements</p>
+      </div>
+
+      <div class="two-column-content w-80 mb-50">
+        <div class="header-column">
+          <h6 class="mb-075">Building a Modular Workspace</h6>
+          <p class="n5">Defining a purpose-built component library</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p class="mb-30">For editing contract sections, I defined a multi-component workspace that treats the contract as a collection of intelligent building blocks. This architecture allows the system to support complex, out-of-the-box federal formats, such as the Uniform Contract Format, while maintaining strict regulatory integrity.</p>
+            <p class="bold mb-050">Engineering Specialized Components</p>
+            <p class="mb-10">I designed new, data-driven components to handle the unique density of contract information:</p>
+            <ul class="mt-025">
+              <li class="mt-025">Data-Synced Record Tables</li>
+              <li class="mt-025">AI-Powered Text Blocks</li>
+              <li class="mt-025">Standardized Boilerplate Text</li>
+              <li class="mt-025">Automated Fill-ins</li>
+              <li class="mt-025">Integrated Clauses</li>
+            </ul>
+            <!-- <ul class="mt-025 mb-10">
+              <li class="mt-075"><span class="bold">Data-Synced Record Tables</span><br>Dynamic, read-only tables that sync directly with the contract record, ensuring high-stakes areas like Line Items under Section B (Supplies and Pricing) are 100% accurate</li>
+              <li class="mt-075"><span class="bold">AI-Powered Text Blocks</span><br>Narrative sections equipped with "Guiding Questions" that prompt users for context, allowing the AI to pre-fill answers based on the procurement record</li>
+              <li class="mt-075"><span class="bold">Standardized Boilerplate Text</span><br>Pre-defined, non-editable text blocks that eliminate repetitive manual entry while remaining shielded from AI modification to ensure regulatory consistency</li>
+              <li class="mt-075"><span class="bold">Automated Fill-ins</span><br>Standardized language components featuring dynamic fields that automatically populate based on specific data points within the contract record</li>
+              <li class="mt-075"><span class="bold">Integrated Clauses</span><br>Legal clauses pulled directly from a centralized library to ensure the contract remains anchored to the legal "source of truth"</li>
+            </ul> -->
+          </div>
+      </div>
+
+      <div class="w-80 mb-80">
+        <div class="card mb-10" style="background-color: #F0F1F6;">
+            <img src="../assets/images/aidb/aidb-components.png" />
+        </div>
+        <p class="n5">Real-time component editing and collaborative feedback within the Contract Text Workspace</p>
+      </div>
+
+      <!-- MOCKUPS -->
+       <div class="two-column-content w-80 mb-50">
+        <div class="header-column">
+            <h6 class="mb-075">Visualizing the Drafting Experience</h6>
+            <p class="n5">Mapping the end-to-end journey from template to final text</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>With the modular architecture and specialized components defined, I developed high-fidelity mockups to demonstrate how these elements function in practice. The following screens illustrate the cohesive drafting journey, showing how the proof of concept guides a user from initial template selection through data-driven automation to a polished, final contract section.</p>
+        </div>
+      </div>
+
+      <div class="w-80 mb-80">
+        <div class="card mb-10" style="background-color: #F0F1F6;">
+            <img src="../assets/images/aidb/aidb-mockups.png" />
+        </div>
+        <p class="n5">Mockups to illustrate each user flow</p>
+      </div>
+
+      <div class="two-column-content align-center w-80 mb-80">
+        <div class="header-column">
+          <h6 class="mb-075">Customizable Contract Templates</h6>
+          <p class="n5">Define standardized formats and recommendation rules to accelerate the initial drafting phase</p>
+        </div>
+        <div class="content-column">
+          <img src="../assets/images/aidb/aidb-create-template.png" />
+        </div>
+      </div>
+
+      <div class="two-column-content align-center w-80 mb-80">
+        <div class="content-column">
+          <img src="../assets/images/aidb/aidb-create-contract-text.png" />
+        </div>
+        <div class="header-column">
+          <h6 class="mb-075">Data-Integrated AI Drafting</h6>
+          <p class="n5">Automatically leverage the existing procurement records alongside uploaded documents and notes to generate context-aware text</p>
+        </div>
+      </div>
+
+      <div class="two-column-content align-center w-80 mb-80">
+        <div class="header-column">
+          <h6 class="mb-075">Consolidated Contract Text Preview</h6>
+          <p class="n5">View the full contract hierarchy within the record to initiate section-level edits or team reviews</p>
+        </div>
+        <div class="content-column">
+          <img src="../assets/images/aidb/aidb-contract-text-preview.png" />
+        </div>
+      </div>
+
+      <div class="two-column-content align-center w-80 mb-50">
+        <div class="content-column">
+          <img src="../assets/images/aidb/aidb-contract-text-workspace.png" />
+        </div>
+        <div class="header-column">
+          <h6 class="mb-075">AI-Assisted Narrative Generation</h6>
+          <p class="n5">Answer templated guiding questions to provide the AI with specific context for generating and refining complex contract sections</p>
+        </div>
+      </div>
+
+      <div class="two-column-content w-80">
+        <div class="header-column">
+            <h6 class="mb-075">Outcome & Impact</h6>
+            <p class="n5">Accelerating the product roadmap through an evolved contract editor</p>
+        </div>
+        
+        <div class="content-column"> 
+            <p>This proof of concept demonstrated a clear path for evolving our existing document builder into a robust, specialized workspace for complex contract drafting. By showcasing a modular, "human-in-the-loop" editor tailored to specific federal use cases, the vision secured strong internal stakeholder buy-in and was successfully prioritized higher on the product roadmap. Moving forward, the project is entering a phase of deep technical mapping and user validation to ensure these advanced capabilities integrate seamlessly into our broader contract writing solution.</p>
+        </div>
+      </div>
     </section>
 
     <section id="work" class="bg-n2" data-nav-color=var(--color-n2)>
@@ -106,7 +295,7 @@
                   <a href="../case-studies/aidb.html">
                     <div class="work-card-small" style="background-image: url(../assets/images/aidb/aidb-cover.png)">
                     <div class="project-card-contents">
-                        <p class="work-text">Document Builder</p>
+                        <p class="work-text">Contract Text Workspace</p>
                       </div>
                     </div>
                   </a>
