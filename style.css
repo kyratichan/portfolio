@@ -293,6 +293,12 @@ html {
     line-height: 4rem !important;
     letter-spacing: -0.04rem;
   }
+
+  .underline {
+    text-decoration: underline var(--color-n5);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+  }
 }
 
 svg {
