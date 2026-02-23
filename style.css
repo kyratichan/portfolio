@@ -283,17 +283,14 @@ html {
   }
 
   h1 {
-    font-size: 4rem;
-    font-weight: normal;
-    line-height: 5rem;
-    letter-spacing: -0.12rem;
+    font-size: 4rem !important;
+    line-height: 5.5rem !important;
+    letter-spacing: -0.1rem !important;
   }
 
   h2 {
-    font-family: 'SalmaPro-Regular';
-    font-size: 3rem;
-    line-height: 3.75rem;
-    font-weight: normal;
+    font-size: 3rem !important;
+    line-height: 4rem !important;
     letter-spacing: -0.04rem;
   }
 }
