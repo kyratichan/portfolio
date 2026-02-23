@@ -237,6 +237,40 @@ html {
   }
 }
 
+@media (max-width: 480px) {
+
+  .divider {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .mt-50, .mt-60 {
+    margin-top: 3rem !important;
+  }
+
+  .mb-50, .mb-60 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-80 {
+    margin-bottom: 4rem !important;
+  }
+
+  .sbs-align-bottom {
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+
+  #customer-quote {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 2.5rem 2.5rem !important;
+  }
+}
+
 svg {
   display: block;
 }
