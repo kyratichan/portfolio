@@ -297,7 +297,7 @@ html {
   .underline {
     text-decoration: underline var(--color-n5) !important;
     text-decoration-thickness: 1px !important;
-    text-underline-offset: 6px !important;
+    text-underline-offset: 3px !important;
   }
 }
 
