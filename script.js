@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
   const pathSegments = path.split('/').filter(p => p !== "" && p !== "portfolio");
-  const isSubfolder = pathSegments.length >= 1;
-  const base = isSubfolder ? '../' : './';
+  // DYNAMIC DEPTH CALCULATION:
+  // This creates a string like "../../" based on how many folders deep you are.
+  const depth = pathSegments.length;
+  const base = depth > 0 ? "../".repeat(depth) : "./";
+  console.log('Detected Depth:', depth);
+  console.log('Dynamic Base Path:', base);
+
   let currentPage = pathSegments[pathSegments.length - 1] || 'index';
-  if (currentPage === 'portfolio' || currentPage === 'index.html') {
-    currentPage = 'index';
-  }
-  
+  currentPage = currentPage.replace('.html', '');
   console.log('Base Path:', base);
   console.log('Current Page:', currentPage);
 
