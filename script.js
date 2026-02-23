@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // This checks if the URL contains 'case-studies' or 'playground'
-  const isSubfolder = window.location.pathname.includes('/case-studies/') || 
-                    window.location.pathname.includes('/playground/');
-
+  const path = window.location.pathname;
+  const pathSegments = path.split('/').filter(p => p !== "" && p !== "portfolio");
+  const isSubfolder = pathSegments.length >= 1;
   const base = isSubfolder ? '../' : './';
-  const currentPage = window.location.pathname.split('/').pop().split('.')[0] || 'index';
-  console.log('Current page:', currentPage);  // Log currentPage
+  let currentPage = pathSegments[pathSegments.length - 1] || 'index';
+  if (currentPage === 'portfolio' || currentPage === 'index.html') {
+    currentPage = 'index';
+  }
+  
+  console.log('Base Path:', base);
+  console.log('Current Page:', currentPage);
 
   /* Loading nav bar */
   fetch(`${base}nav.html`)

@@ -12,22 +12,12 @@ html {
 /* Fonts */
 @font-face {
   font-family: 'SalmaPro-Medium';
-  src: url('/portfolio/fonts/SalmaPro-Medium.ttf') format('truetype');
+  src: url('fonts/SalmaPro-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'SalmaPro-Regular';
-  src: url('/portfolio/fonts/SalmaPro-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'ITCGaramondStd-LtCond';
-  src: url('/portfolio/fonts/ITCGaramondStd-LtCond.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'NeueHaasDisplay-Light';
-  src: url('/portfolio/fonts/NeueHaasDisplayLight.ttf') format('ttf');
+  src: url('fonts/SalmaPro-Regular.ttf') format('truetype');
 }
 
 /* Colors */
