@@ -151,6 +151,10 @@ html {
     gap: 6rem;
   }
 
+  #about-description {
+    text-align: left !important;
+  }
+
   /* 2. ENABLE WRAPPING on the main container */
   #play-page .two-column-sticky-scroll {
     display: block !important;
@@ -883,6 +887,28 @@ a:hover .work-card {
   vertical-align: middle;
 }
 
+.sbs-play {
+  /* align-items: center; */
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.sbs-play .sbs-left {
+  width: 100%;
+  flex: 1 1 auto;
+  max-width: 80%;
+  text-align: left;
+}
+
+.sbs-play .sbs-right {
+  width: 100%;
+  flex: 1 1 auto;
+  max-width: 20%;
+  text-align: right;
+}
+
 .sbs-number {
   align-items: flex-start;
   display: flex;
@@ -903,6 +929,24 @@ a:hover .work-card {
     flex-direction: column; 
     gap: 2rem;
     align-items: flex-start;
+  }
+
+  .sbs-play {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+
+  #playground-projects {
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    flex: 1 1 auto;
+  }
+
+  #footer .sbs {
+    gap: 0.5rem;
   }
 
   .sbs-right {
@@ -952,12 +996,16 @@ a:hover .work-card {
 
   /* 2. Fix the description height and spacing */
   #work-description {
-    flex: 0 0 auto; /* Stop it from trying to grow/stretch */
+    flex: 0 0 auto !important; /* Stop it from trying to grow/stretch */
     width: 100%;
     max-width: 100%;
     height: auto !important; /* Critical: removes fixed desktop height */
     justify-content: flex-start;
-    gap: 10px;
+    gap: 1.5rem;
+  }
+
+  #work-description p {
+    margin-bottom: 1.6rem; /* Remove extra space below the paragraph */
   }
 
   /* 3. Ensure the gallery wrapper doesn't restrict size */
@@ -984,22 +1032,6 @@ a:hover .work-card {
     width: 100%;
     /* Keep aspect-ratio 1/1, but since container height is now 'auto', 
        it will push the 'About' section down correctly */
-  }
-}
-
-@media (max-width: 992px) {
-  .sbs-work {
-    flex-direction: column;
-    align-items: flex-start; /* Stop stretching height on mobile */
-    gap: 2rem;
-  }
-  
-  #work-description {
-    flex: 1 1 auto;
-    max-width: 100%;
-    height: auto;
-    justify-content: flex-start; 
-    gap: 0rem; 
   }
 }
 
@@ -1393,6 +1425,7 @@ a:hover .work-card-small {
 #about-description {
   max-width: 340px;
   margin-bottom: 1.6rem;
+  text-align: right;
 }
 
 #work-description {
@@ -1466,6 +1499,10 @@ a:hover .work-card-small {
   #playground-description {
     max-width: 500px;
     margin-bottom: 4rem;
+  }
+
+  #about-description {
+    text-align: left !important;
   }
 
   .project-card-small {
