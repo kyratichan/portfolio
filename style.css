@@ -1066,6 +1066,12 @@ a:hover .work-card {
 }
 
 @media (max-width: 992px) {
+  .sbs-data {
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   /* 1. Stack the layout and let height be determined by content */
   .sbs-work {
     flex-direction: column;
