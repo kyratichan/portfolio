@@ -956,6 +956,17 @@ a:hover .work-card {
   vertical-align: middle;
 }
 
+.sbs-data {
+  align-items: flex-start;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.sbs-data > div {
+  flex: 1;
+}
+
 .sbs-play {
   /* align-items: center; */
   display: flex;
@@ -1706,6 +1717,29 @@ p {
   font-weight: 300;
   font-style: normal;
   font-size: 1.125rem;
+}
+
+.data {
+  font-family: "Geist", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h2.number {
+  display: flex;
+  align-items: baseline; /* This keeps everything on the same 'floor' */
+  gap: 0.1rem;
+  font-size: 3.5rem !important;
+  line-height: normal !important; /* Let the flex container handle the height */
+  margin: 0;
+  letter-spacing: -0.04rem;
+}
+
+.symbol {
+  font-family: 'SalmaPro-Regular';
+  font-size: 2.85rem;
+  position: relative;
+  bottom: 0.25rem;
 }
 
 p.work-text {
